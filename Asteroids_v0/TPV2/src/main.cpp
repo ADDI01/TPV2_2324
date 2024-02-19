@@ -5,7 +5,6 @@
 #include "game/Game.h"
 
 int main(int, char**) {
-
 	try {
 		Game &g = *Game::instance();
 		g.init();

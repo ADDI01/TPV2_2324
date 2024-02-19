@@ -161,7 +161,6 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>C:\Users\David\Desktop\Portal\GRADO DESARROLLO DE VIDEOJUEGOS\CURSOS\2ºCURSO\ASIGNATURAS\TPV2_2324\Asteroids_v0\SDL2-2.0.7\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>

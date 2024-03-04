@@ -19,6 +19,5 @@ private:
 	RandomNumberGenerator &rand_;
 	int width_;
 	int height_;
-
 };
 

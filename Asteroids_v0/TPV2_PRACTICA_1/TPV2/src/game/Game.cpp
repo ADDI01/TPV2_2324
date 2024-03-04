@@ -58,8 +58,6 @@ void Game::init() {
 	gameover_state_ = new GameOverState();
 
 	current_state_ = newgame_state_;
-
-
 }
 
 void Game::start() {
@@ -89,4 +87,3 @@ void Game::start() {
 	}
 
 }
-

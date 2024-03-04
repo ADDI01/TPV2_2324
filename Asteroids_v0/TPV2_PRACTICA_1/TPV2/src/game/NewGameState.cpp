@@ -29,6 +29,7 @@ void NewGameState::update() {
 		fighter_mngr_->reset_lives();
 		Game::instance()->setState(Game::NEWROUND);
 	}
+
 	sdlutils().clearRenderer();
 	msg_.render(dest_);
 	sdlutils().presentRenderer();

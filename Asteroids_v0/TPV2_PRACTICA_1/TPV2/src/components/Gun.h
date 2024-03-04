@@ -53,6 +53,5 @@ private:
 	InputHandler &ihdrl;
 	Uint32 lastShoot_;
 	int lastUsed_;
-
 };
 

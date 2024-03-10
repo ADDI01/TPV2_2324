@@ -4,7 +4,11 @@
 #include "../ecs/Manager.h"
 #include "../components/Transform.h"
 #include "../components/Image.h"
+<<<<<<< Updated upstream
 #include "../components/Rotation.h"
+=======
+#include <math.h>
+>>>>>>> Stashed changes
 
 BlackHolesUtils::BlackHolesUtils() : rand_(sdlutils().rand()), width_(sdlutils().width()), height_(sdlutils().height())
 {
@@ -24,10 +28,17 @@ void BlackHolesUtils::create_blackHoles(int n)
 		//las probabilidades de dejar el programa colgado son nulas y que este bucle se repita más de una vez son
 		// mínimas, esto evita que spawnee un agujero en el centro y les da un valor distinto a cada agujero
 		do {
+<<<<<<< Updated upstream
 			x = rand_.nextInt(408 * 0.1, sdlutils().width() - 408 * 0.1);
 			y = rand_.nextInt(341 * 0.1, sdlutils().height() - 341 * 0.1);
 		} while (x <= sdlutils().width() / 2 - 400 || y <= sdlutils().height()/2 -400
 			|| x >= sdlutils().width() / 2 + 400 || y >= sdlutils().height() / 2 + 400);
+=======
+			x = rand_.nextInt(width_, sdlutils().width() - width_);
+			y = rand_.nextInt(height_, sdlutils().height() - height_);
+		} while (sqrt((x + sdlutils().width() / 2) * (x + sdlutils().width() / 2) +
+			(y + sdlutils().height() / 2) * (y + sdlutils().height() / 2)) <= 200);
+>>>>>>> Stashed changes
 		generateBlackHoles(Vector2D(x,y));
 	}
 }

@@ -11,6 +11,7 @@
 #include "AsteroidsFacade.h"
 #include "FighterFacade.h"
 #include "BlackHolesFacade.h"
+#include <math.h>
 
 #include "Game.h"
 
@@ -172,11 +173,18 @@ void RunningState::checkCollisions() {
 				//las probabilidades de dejar el programa colgado son nulas y que este bucle se repita más de una vez son
 				// mínimas, esto evita que spawnee un asteroide encima del caza y les da un valor distinto a cada agujero
 				do {
+<<<<<<< Updated upstream
 					 x = sdlutils().rand().nextInt(astT->getWidth(), sdlutils().width() - astT->getWidth());
 					 y = sdlutils().rand().nextInt(astT->getHeight(), sdlutils().height() - astT->getHeight());
 				} while (x <= fighterTR->getPos().getX() - 300 || y <= fighterTR->getPos().getY()-300 ||
 					x >= fighterTR->getPos().getX() + 300 || y >= fighterTR->getPos().getY() + 300);
 
+=======
+					 x = sdlutils().rand().nextInt(bTR->getWidth(), sdlutils().width() - bTR->getWidth());
+					 y = sdlutils().rand().nextInt(bTR->getHeight(), sdlutils().height() - bTR->getHeight());
+				} while (sqrt((x + astT->getPos().getX()) * (x + astT->getPos().getX()) + 
+					(y + astT->getPos().getY()) * (y + astT->getPos().getY())) <= 200);
+>>>>>>> Stashed changes
 				   astT->setPos((Vector2D(x, y)));
 				return;
 			}

@@ -6,6 +6,18 @@
 class Transform;
 
 class Rotation : public ecs::Component {
+<<<<<<< Updated upstream
+=======
+
+	__CMPID_DECL__(ecs::cmp::TRANSFORM)
+
+	Rotation() {}
+	virtual ~Rotation() {}
+
+	void initComponent();
+	void update();
+
+>>>>>>> Stashed changes
 public:
 	__CMPID_DECL__(ecs::cmp::ROTATION)
 

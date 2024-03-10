@@ -1,4 +1,5 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: El directorio Output no termina con una barra diagonal final. Esta instancia de compilación agregará la barra diagonal porque es necesaria para que se pueda evaluar correctamente el directorio Output.
+<<<<<<< Updated upstream
   BlackHolesUtils.cpp
 C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\BlackHolesUtils.cpp(27,52): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
 C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\BlackHolesUtils.cpp(27,26): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
@@ -41,5 +42,9 @@ C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\s
           ]
 C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\RunningState.cpp(131,52): message : vea la primera referencia a “SDLUtils::map_access_wrapper<SoundEffect>::at” en “RunningState::checkCollisions”
 C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\sdlutils\SDLUtils.h(201,34): message : Vea la referencia a la creación de una instancia de clase plantilla "SDLUtils::map_access_wrapper<SoundEffect>" que se está compilando
+=======
+  Rotation.cpp
+  Vector2D.cpp
+>>>>>>> Stashed changes
   Generando código...
-  TPV2.vcxproj -> C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\bin\TPV2Debug.exe
+  TPV2.vcxproj -> C:\Users\David\Desktop\Portal\GRADO DESARROLLO DE VIDEOJUEGOS\CURSOS\2ºCURSO\ASIGNATURAS\TPV2_2324\TPV2_PRACTICA_1\bin\TPV2Debug.exe

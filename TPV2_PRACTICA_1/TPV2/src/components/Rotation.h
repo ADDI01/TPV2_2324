@@ -6,17 +6,15 @@
 class Transform;
 
 class Rotation : public ecs::Component {
-
-	__CMPID_DECL__(ecs::cmp::TRANSFORM)
-
-	Rotation() {}
-	Rotation() {}
-	virtual ~Rotation() {}
-
-	void initComponent();
-	void update();
-
 public:
+	__CMPID_DECL__(ecs::cmp::ROTATION)
+
+	Rotation():tr_() {};
+	virtual ~Rotation() {};
+	void initComponent();
+	void update() override;
+
+private:
 	float rotation_;
 	float actualRotation_;
 	Transform* tr_;

@@ -172,9 +172,11 @@ void RunningState::checkCollisions() {
 				//las probabilidades de dejar el programa colgado son nulas y que este bucle se repita más de una vez son
 				// mínimas, esto evita que spawnee un asteroide encima del caza y les da un valor distinto a cada agujero
 				do {
-					 x = sdlutils().rand().nextInt(408 * 0.1, sdlutils().width() - 408 * 0.1);
-					 y = sdlutils().rand().nextInt(341 * 0.1, sdlutils().height() - 341 * 0.1);
-				} while (x == sdlutils().width() / 2 && y == sdlutils().height() - 341 * 0.1);
+					 x = sdlutils().rand().nextInt(astT->getWidth(), sdlutils().width() - astT->getWidth());
+					 y = sdlutils().rand().nextInt(astT->getHeight(), sdlutils().height() - astT->getHeight());
+				} while (x <= fighterTR->getPos().getX() - 300 || y <= fighterTR->getPos().getY()-300 ||
+					x >= fighterTR->getPos().getX() + 300 || y >= fighterTR->getPos().getY() + 300);
+
 				   astT->setPos((Vector2D(x, y)));
 				return;
 			}

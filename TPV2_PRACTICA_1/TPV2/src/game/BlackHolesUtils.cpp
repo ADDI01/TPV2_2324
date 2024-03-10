@@ -4,6 +4,7 @@
 #include "../ecs/Manager.h"
 #include "../components/Transform.h"
 #include "../components/Image.h"
+#include "../components/Rotation.h"
 
 BlackHolesUtils::BlackHolesUtils() : rand_(sdlutils().rand()), width_(sdlutils().width()), height_(sdlutils().height())
 {
@@ -25,7 +26,8 @@ void BlackHolesUtils::create_blackHoles(int n)
 		do {
 			x = rand_.nextInt(408 * 0.1, sdlutils().width() - 408 * 0.1);
 			y = rand_.nextInt(341 * 0.1, sdlutils().height() - 341 * 0.1);
-		} while (x == sdlutils().width() / 2 && y == sdlutils().height() - 341 * 0.1);
+		} while (x <= sdlutils().width() / 2 - 400 || y <= sdlutils().height()/2 -400
+			|| x >= sdlutils().width() / 2 + 400 || y >= sdlutils().height() / 2 + 400);
 		generateBlackHoles(Vector2D(x,y));
 	}
 }
@@ -47,4 +49,5 @@ void BlackHolesUtils::generateBlackHoles(const Vector2D& p)
 	auto e = mngr->addEntity(ecs::grp::BLACKHOLES);
 	mngr->addComponent<Transform>(e, p, Vector2D(0,0), 408 * 0.1, 341 * 0.1, 0.0f);
 	mngr->addComponent<Image>(e, &sdlutils().images().at("black-hole"));
+	mngr->addComponent<Rotation>(e);
 }

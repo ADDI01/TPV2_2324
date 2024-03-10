@@ -15,10 +15,18 @@ BlackHolesUtils::~BlackHolesUtils()
 
 void BlackHolesUtils::create_blackHoles(int n)
 {
+	float x;
+	float y;
 
-	for (int i = 0; i < n; i++) 
+	for (int i = 0; i < 6; i++) 
 	{
-		generateBlackHoles(Vector2D(100,100));
+		//las probabilidades de dejar el programa colgado son nulas y que este bucle se repita más de una vez son
+		// mínimas, esto evita que spawnee un agujero en el centro y les da un valor distinto a cada agujero
+		do {
+			x = rand_.nextInt(408 * 0.1, sdlutils().width() - 408 * 0.1);
+			y = rand_.nextInt(341 * 0.1, sdlutils().height() - 341 * 0.1);
+		} while (x == sdlutils().width() / 2 && y == sdlutils().height() - 341 * 0.1);
+		generateBlackHoles(Vector2D(x,y));
 	}
 }
 

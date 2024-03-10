@@ -81,6 +81,8 @@ public:
 			draw();
 	}
 
+	void setPos(Vector2D pos) { pos_ = pos; };
+
 private:
 	void draw();
 	Vector2D pos_;

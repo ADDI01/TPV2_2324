@@ -155,6 +155,30 @@ void RunningState::checkCollisions() {
 			onFigherDeath();
 			return;
 		}
+
+		for (auto ast : asteroids) {
+			Transform* astT = mngr->getComponent<Transform>(ast);
+			if (Collisions::collidesWithRotation( //
+				astT->getPos(), //
+				astT->getWidth(), //
+				astT->getHeight(), //
+				astT->getRot(), //
+				bTR->getPos(), //
+				bTR->getWidth(), //
+				bTR->getHeight(), //
+				bTR->getRot())) {
+				float x;
+				float y;
+				//las probabilidades de dejar el programa colgado son nulas y que este bucle se repita más de una vez son
+				// mínimas, esto evita que spawnee un asteroide encima del caza y les da un valor distinto a cada agujero
+				do {
+					 x = sdlutils().rand().nextInt(408 * 0.1, sdlutils().width() - 408 * 0.1);
+					 y = sdlutils().rand().nextInt(341 * 0.1, sdlutils().height() - 341 * 0.1);
+				} while (x == sdlutils().width() / 2 && y == sdlutils().height() - 341 * 0.1);
+				   astT->setPos((Vector2D(x, y)));
+				return;
+			}
+		}
 	}
 
 }

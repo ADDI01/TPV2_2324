@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\components\Rotation.h" />
     <ClInclude Include="src\game\MissilesUtils.h" />
     <ClInclude Include="src\game\BlackHolesUtils.h" />
     <ClInclude Include="src\components\DeAcceleration.h" />
@@ -72,6 +73,7 @@
     <ClInclude Include="src\utils\Vector2D.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\components\Rotation.cpp" />
     <ClCompile Include="src\game\MissilesUtils.cpp" />
     <ClCompile Include="src\game\BlackHolesUtils.cpp" />
     <ClCompile Include="src\components\DeAcceleration.cpp" />

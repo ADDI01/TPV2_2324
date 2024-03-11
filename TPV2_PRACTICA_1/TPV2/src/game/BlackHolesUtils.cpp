@@ -5,6 +5,7 @@
 #include "../components/Transform.h"
 #include "../components/Image.h"
 #include "../components/Rotation.h"
+#include <math.h>
 
 BlackHolesUtils::BlackHolesUtils() : rand_(sdlutils().rand()), width_(sdlutils().width()), height_(sdlutils().height())
 {
@@ -26,8 +27,8 @@ void BlackHolesUtils::create_blackHoles(int n)
 		do {
 			x = rand_.nextInt(0, width_ - 408 * 0.1);
 			y = rand_.nextInt(0, height_ - 341 * 0.1);
-		} while (sqrt((x + width_ / 2) * (x + width_ / 2) +
-			(y + height_ / 2) * (y + height_ / 2)) <= 200);
+		} while (sqrt((x - width_ / 2) * (x - width_ / 2) +
+			(y - height_ / 2) * (y - height_ / 2)) <= 200);
 		generateBlackHoles(Vector2D(x,y));
 	}
 }

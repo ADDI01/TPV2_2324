@@ -1,2 +1,49 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: El directorio Output no termina con una barra diagonal final. Esta instancia de compilación agregará la barra diagonal porque es necesaria para que se pueda evaluar correctamente el directorio Output.
+  MarginsCollision.cpp
+  MissilesUtils.cpp
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\MissilesUtils.cpp(49,23): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\MissilesUtils.cpp(52,27): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\MissilesUtils.cpp(55,55): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\MissilesUtils.cpp(55,23): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\MissilesUtils.cpp(63,15): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\MissilesUtils.cpp(62,35): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\MissilesUtils.cpp(65,51): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\sdlutils\SDLUtils.h(51,32): warning C4101: 'e': variable local sin referencia
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\sdlutils\SDLUtils.h(48,13): message : al compilar la función del miembro clase plantilla "T &SDLUtils::map_access_wrapper<T>::at(const std::string &)"
+          with
+          [
+              T=Texture
+          ]
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\MissilesUtils.cpp(38,13): message : vea la primera referencia a “SDLUtils::map_access_wrapper<Texture>::at” en “MissilesUtils::generateMissiles”
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\sdlutils\SDLUtils.h(199,30): message : Vea la referencia a la creación de una instancia de clase plantilla "SDLUtils::map_access_wrapper<Texture>" que se está compilando
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\ecs\Manager.h(86,40): warning C4244: 'argumento': conversión de '_Ty' a 'float'; posible pérdida de datos
+          with
+          [
+              _Ty=double
+          ]
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\MissilesUtils.cpp(67,6): message : Vea la referencia a la creación de una instancia de la función plantilla "T *ecs::Manager::addComponent<Transform,Vector2D&,Vector2D&,double,double,float>(ecs::entity_t,Vector2D &,Vector2D &,double &&,double &&,float &&)" que se está compilando
+          with
+          [
+              T=Transform
+          ]
+  RunningState.cpp
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\RunningState.cpp(139,8): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\RunningState.cpp(138,8): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\RunningState.cpp(191,74): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\RunningState.cpp(191,51): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\RunningState.cpp(191,36): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\RunningState.cpp(192,76): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\RunningState.cpp(192,52): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\RunningState.cpp(192,36): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\RunningState.cpp(226,7): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\RunningState.cpp(225,7): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\sdlutils\SDLUtils.h(51,32): warning C4101: 'e': variable local sin referencia
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\sdlutils\SDLUtils.h(48,13): message : al compilar la función del miembro clase plantilla "T &SDLUtils::map_access_wrapper<T>::at(const std::string &)"
+          with
+          [
+              T=SoundEffect
+          ]
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\RunningState.cpp(147,52): message : vea la primera referencia a “SDLUtils::map_access_wrapper<SoundEffect>::at” en “RunningState::checkCollisions”
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\sdlutils\SDLUtils.h(201,34): message : Vea la referencia a la creación de una instancia de clase plantilla "SDLUtils::map_access_wrapper<SoundEffect>" que se está compilando
+  Generando código...
   TPV2.vcxproj -> C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\bin\TPV2Debug.exe

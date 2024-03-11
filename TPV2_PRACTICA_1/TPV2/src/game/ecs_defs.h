@@ -17,7 +17,9 @@
 	HEALTH, \
 	GUN, \
 	IMAGEWITHFRAMES, \
-	ROTATION
+	ROTATION, \
+	LOOKAT, \
+	MARGINSCOLLISION
 
 
 // Groups list - must have at least one element
@@ -25,7 +27,7 @@
 #define _GRPS_LIST_ \
 	ASTEROIDS, \
 	BLACKHOLES, \
-	MISILES 
+	MISSILES 
 	
 
 // Handlers list - must have at least one element

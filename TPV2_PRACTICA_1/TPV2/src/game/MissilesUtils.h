@@ -14,7 +14,7 @@ public:
     void create_missiles(int n) override;
 
 private:
-    void generateBlackHoles(const Vector2D& p, const Vector2D& v, int g);
+    void generateMissiles();
     RandomNumberGenerator& rand_;
     int width_;
     int height_;

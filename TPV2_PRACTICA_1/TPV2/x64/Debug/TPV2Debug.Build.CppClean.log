@@ -1,22 +1,69 @@
-c:\users\samir\tpv2\tpv2\tpv2\tpv2\x64\debug\vc143.pdb
-c:\users\samir\tpv2\tpv2\tpv2\tpv2\x64\debug\vc143.idb
-c:\users\samir\tpv2\tpv2\tpv2\tpv2\x64\debug\vector2d.obj
-c:\users\samir\tpv2\tpv2\tpv2\tpv2\x64\debug\collisions.obj
-c:\users\samir\tpv2\tpv2\tpv2\tpv2\x64\debug\texture.obj
-c:\users\samir\tpv2\tpv2\tpv2\tpv2\x64\debug\soundeffect.obj
-c:\users\samir\tpv2\tpv2\tpv2\tpv2\x64\debug\sdlutils_demo.obj
-c:\users\samir\tpv2\tpv2\tpv2\tpv2\x64\debug\sdlutils.obj
-c:\users\samir\tpv2\tpv2\tpv2\tpv2\x64\debug\main.obj
-c:\users\samir\tpv2\tpv2\tpv2\tpv2\x64\debug\json_demo.obj
-c:\users\samir\tpv2\tpv2\tpv2\tpv2\x64\debug\jsonvalue.obj
-c:\users\samir\tpv2\tpv2\tpv2\tpv2\x64\debug\json.obj
-c:\users\samir\tpv2\tpv2\tpv2\tpv2\x64\debug\tpv2debug.ilk
-c:\users\samir\tpv2\tpv2\tpv2\bin\tpv2debug.exe
-c:\users\samir\tpv2\tpv2\tpv2\bin\tpv2debug.pdb
-c:\users\samir\tpv2\tpv2\tpv2\tpv2\x64\debug\tpv2.tlog\cl.command.1.tlog
-c:\users\samir\tpv2\tpv2\tpv2\tpv2\x64\debug\tpv2.tlog\cl.items.tlog
-c:\users\samir\tpv2\tpv2\tpv2\tpv2\x64\debug\tpv2.tlog\cl.read.1.tlog
-c:\users\samir\tpv2\tpv2\tpv2\tpv2\x64\debug\tpv2.tlog\cl.write.1.tlog
-c:\users\samir\tpv2\tpv2\tpv2\tpv2\x64\debug\tpv2.tlog\link.command.1.tlog
-c:\users\samir\tpv2\tpv2\tpv2\tpv2\x64\debug\tpv2.tlog\link.read.1.tlog
-c:\users\samir\tpv2\tpv2\tpv2\tpv2\x64\debug\tpv2.tlog\link.write.1.tlog
+c:\users\adria\source\repos\tpv_ii\tpv-2\tpv2_practica_1\tpv2\x64\debug\vc143.pdb
+c:\users\adria\source\repos\tpv_ii\tpv-2\tpv2_practica_1\tpv2\x64\debug\vc143.idb
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\vc143.pdb
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\vc143.idb
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\newroundstate.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\newgamestate.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\missilesutils.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\gameoverstate.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\game.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\fighterutils.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\blackholesutils.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\asteroidsutils.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\manager.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\transform.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\towardsdestination.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\showatopossiteside.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\rotation.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\imagewithframes.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\image.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\health.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\gun.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\follow.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\fighterctrl.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\deacceleration.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\vector2d.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\collisions.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\sdlutils_demo.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\texture.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\soundeffect.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\sdlutils.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\main.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\json_demo.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\jsonvalue.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\json.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\runningstate.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\pausedstate.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\lookat.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\marginscollision.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\bin\tpv2debug.exe
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\tpv2debug.ilk
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\bin\tpv2debug.pdb
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\aipaddle.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\bounceonborder.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\containter.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\emptyrectanglerenderer.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\gamectrl.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\gamemanager.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\imagerenderer.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\infomsgs.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\movepaddlewithkeyboard.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\movepaddlewithmouse.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\pacmanctrl.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\rectanglerenderer.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\scorerenderer.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\showatoppositeside.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\simplemove.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\starmotion.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\stoponborder.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\stoponborders.obj
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\blackholesutils.obj.enc
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\game.obj.enc
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\rotation.obj.enc
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\tpv2.tlog\cl.command.1.tlog
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\tpv2.tlog\cl.items.tlog
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\tpv2.tlog\cl.read.1.tlog
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\tpv2.tlog\cl.write.1.tlog
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\tpv2.tlog\link.command.1.tlog
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\tpv2.tlog\link.read.1.tlog
+c:\users\usuario\documents\proyectos de git hub\tpv2_2324\tpv2_practica_1\tpv2\x64\debug\tpv2.tlog\link.write.1.tlog

@@ -24,10 +24,10 @@ void BlackHolesUtils::create_blackHoles(int n)
 		//las probabilidades de dejar el programa colgado son nulas y que este bucle se repita más de una vez son
 		// mínimas, esto evita que spawnee un agujero en el centro y les da un valor distinto a cada agujero
 		do {
-			x = rand_.nextInt(width_, sdlutils().width() - width_);
-			y = rand_.nextInt(height_, sdlutils().height() - height_);
-		} while (sqrt((x + sdlutils().width() / 2) * (x + sdlutils().width() / 2) +
-			(y + sdlutils().height() / 2) * (y + sdlutils().height() / 2)) <= 200);
+			x = rand_.nextInt(0, width_ - 408 * 0.1);
+			y = rand_.nextInt(0, height_ - 341 * 0.1);
+		} while (sqrt((x + width_ / 2) * (x + width_ / 2) +
+			(y + height_ / 2) * (y + height_ / 2)) <= 200);
 		generateBlackHoles(Vector2D(x,y));
 	}
 }

@@ -190,9 +190,16 @@ void RunningState::checkCollisions() {
 				do {
 					 x = sdlutils().rand().nextInt(astT->getWidth(), sdlutils().width() - astT->getWidth());
 					 y = sdlutils().rand().nextInt(astT->getHeight(), sdlutils().height() - astT->getHeight());
+<<<<<<< HEAD
 				} while (sqrt((x - fighterTR->getPos().getX()) * (x - fighterTR->getPos().getX()) +
 					(y - fighterTR->getPos().getY()) * (y - fighterTR->getPos().getY())) <= 200);
 				astT->setPos((Vector2D(x, y)));
+=======
+				} while (x <= fighterTR->getPos().getX() - 300 || y <= fighterTR->getPos().getY()-300 ||
+					x >= fighterTR->getPos().getX() + 300 || y >= fighterTR->getPos().getY() + 300);
+
+				   astT->setPos((Vector2D(x, y)));
+>>>>>>> parent of 0698bc5 (Cambios david incluidos)
 				return;
 			}
 		}

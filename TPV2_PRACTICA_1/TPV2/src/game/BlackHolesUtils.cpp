@@ -22,6 +22,7 @@ void BlackHolesUtils::create_blackHoles(int n)
 	//para elegir vía de spawn
 	int wayToSpawn = rand_.nextInt(0, 2);
 
+<<<<<<< HEAD
 	//Desde dónde queremos emprezar (ángulo)
 	float alpha = 90;
 	//radio de los agujeros al fighter
@@ -53,6 +54,18 @@ void BlackHolesUtils::create_blackHoles(int n)
 			break;
 		default:
 			break;
+=======
+	for (int i = 0; i < 6; i++) 
+	{
+		//las probabilidades de dejar el programa colgado son nulas y que este bucle se repita más de una vez son
+		// mínimas, esto evita que spawnee un agujero en el centro y les da un valor distinto a cada agujero
+		do {
+			x = rand_.nextInt(408 * 0.1, sdlutils().width() - 408 * 0.1);
+			y = rand_.nextInt(341 * 0.1, sdlutils().height() - 341 * 0.1);
+		} while (x <= sdlutils().width() / 2 - 400 || y <= sdlutils().height()/2 -400
+			|| x >= sdlutils().width() / 2 + 400 || y >= sdlutils().height() / 2 + 400);
+		generateBlackHoles(Vector2D(x,y));
+>>>>>>> parent of 0698bc5 (Cambios david incluidos)
 	}
 }
 

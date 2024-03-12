@@ -32,5 +32,13 @@
 *.app
 *.zip
 
+# Extra files
 *.db
 *.opendb
+*.suo
+*.db
+*.pdb
+*.tlog
+*.log
+*.ilk
+*.idb

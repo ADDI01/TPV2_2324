@@ -5,7 +5,6 @@
 #include "../components/Transform.h"
 #include "../ecs/Manager.h"
 #include "../utils/Collisions.h"
-#include "StarsSystem.h"
 
 CollisionsSystem::CollisionsSystem() {
 	// TODO Auto-generated constructor stub
@@ -30,7 +29,7 @@ void CollisionsSystem::update() {
 	// particular case we could use a for-each loop since the list stars is not
 	// modified.
 	//
-	auto &stars = mngr_->getEntities(ecs::grp::STARS);
+	/*auto& stars = mngr_->getEntities(ecs::grp::STARS);
 	auto n = stars.size();
 	for (auto i = 0u; i < n; i++) {
 		auto e = stars[i];
@@ -53,6 +52,6 @@ void CollisionsSystem::update() {
 			}
 		}
 	}
-
+	*/
 }
 

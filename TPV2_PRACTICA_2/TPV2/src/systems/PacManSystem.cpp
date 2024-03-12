@@ -35,7 +35,7 @@ void PacManSystem::update() {
 
 	if (ihldr.keyDownEvent()) {
 
-		if (ihldr.isKeyDown(SDL_SCANCODE_RIGHT)) { // rotate right
+		/*if (ihldr.isKeyDown(SDL_SCANCODE_RIGHT)) { // rotate right
 			pmTR_->rot_ = pmTR_->rot_ + 5.0f;
 
 			// also rotate the PacMan so it looks in the same
@@ -94,7 +94,7 @@ void PacManSystem::update() {
 		pmTR_->vel_.set(0.0f, 0.0f);
 	} else if (pmTR_->pos_.getY() + pmTR_->height_ > sdlutils().height()) {
 		pmTR_->pos_.setY(sdlutils().height() - pmTR_->height_);
-		pmTR_->vel_.set(0.0f, 0.0f);
+		pmTR_->vel_.set(0.0f, 0.0f);*/
 	}
-
+	
 }

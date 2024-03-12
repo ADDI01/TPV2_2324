@@ -8,7 +8,6 @@
 #include "../sdlutils/macros.h"
 #include "../sdlutils/SDLUtils.h"
 #include "../sdlutils/Texture.h"
-#include "GameCtrlSystem.h"
 
 RenderSystem::RenderSystem() {
 
@@ -26,29 +25,27 @@ void RenderSystem::update() {
 	drawPacMan();
 }
 
-void RenderSystem::drawStars() {
+void RenderSystem::drawStars() { //Hacer getter del atributo tex_ de Image
 	// draw stars
 	for (auto e : mngr_->getEntities(ecs::grp::STARS)) {
 
 		auto tr = mngr_->getComponent<Transform>(e);
-		auto tex = mngr_->getComponent<Image>(e)->tex_;
-		draw(tr, tex);
+		//auto tex = mngr_->getComponent<Image>(e)->tex_;
+		//draw(tr, tex);
 	}
 }
 
-void RenderSystem::drawPacMan() {
+void RenderSystem::drawPacMan() { //Hacer getter del atributo tex_ de Image
 	auto e = mngr_->getHandler(ecs::hdlr::PACMAN);
 	auto tr = mngr_->getComponent<Transform>(e);
-	auto tex = mngr_->getComponent<Image>(e)->tex_;
-	draw(tr, tex);
-
+	//auto tex = mngr_->getComponent<Image>(e)->tex_;
+	//draw(tr, tex);
 }
 
-
-void RenderSystem::drawMsgs() {
+void RenderSystem::drawMsgs() { //Este metodo es si queremos renderizar mesajes durante la partida, como puntuacion
 	// draw the score
 	//
-	auto score = mngr_->getSystem<GameCtrlSystem>()->getScore();
+	/*auto score = mngr_->getSystem<GameCtrlSystem>()->getScore();
 
 	Texture scoreTex(sdlutils().renderer(), std::to_string(score),
 			sdlutils().fonts().at("ARIAL24"), build_sdlcolor(0x444444ff));
@@ -63,12 +60,12 @@ void RenderSystem::drawMsgs() {
 
 	// draw add stars message
 	sdlutils().msgs().at("addstars").render(10, 10);
-
+	*/
 }
 
-void RenderSystem::draw(Transform *tr, Texture *tex) {
-	SDL_Rect dest = build_sdlrect(tr->pos_, tr->width_, tr->height_);
+void RenderSystem::draw(Transform *tr, Texture *tex) { //Hacer getter del atributo tex_ de Image
+	//SDL_Rect dest = build_sdlrect(tr->pos_, tr->width_, tr->height_);
 
 	assert(tex != nullptr);
-	tex->render(dest, tr->rot_);
+	//tex->render(dest, tr->rot_);
 }

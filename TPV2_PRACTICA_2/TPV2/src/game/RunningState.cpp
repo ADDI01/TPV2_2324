@@ -2,28 +2,16 @@
 
 #include "RunningState.h"
 
-#include "../components/Gun.h"
 #include "../components/Transform.h"
 #include "../ecs/Manager.h"
 #include "../sdlutils/InputHandler.h"
 #include "../sdlutils/SDLUtils.h"
 #include "../utils/Collisions.h"
-#include "AsteroidsFacade.h"
-#include "FighterFacade.h"
-#include "BlackHolesFacade.h"
-#include <math.h>
-#include "MissilesFacade.h"
 
 #include "Game.h"
 
-RunningState::RunningState(AsteroidsFacade *ast_mngr,
-		FighterFacade *fighter_mngr, BlackHolesFacade * blackHoles_mngr, MissilesFacade* missiles_mngr) :
-		ihdlr(ih()), //
-		ast_mngr_(ast_mngr), //
-		fighter_mngr_(fighter_mngr), //
-	    blackHoles_mngr_(blackHoles_mngr),
-		lastTimeGeneratedAsteroids_(),
-		missiles_mngr_(missiles_mngr){
+RunningState::RunningState() :
+		ihdlr(ih()) {
 } 
 
 RunningState::~RunningState() {
@@ -37,10 +25,10 @@ void RunningState::update() {
 	auto mngr = Game::instance()->getMngr();
 
 	// check if fighter won
-	if (mngr->getEntities(ecs::grp::ASTEROIDS).size() == 0) {
+	/*if (mngr->getEntities(ecs::grp::ASTEROIDS).size() == 0) {
 		Game::instance()->setState(Game::GAMEOVER);
 		return;
-	}
+	}*/
 
 	// move to pause if P pressed
 	if (ihdlr.keyDownEvent() && ihdlr.isKeyDown(SDL_SCANCODE_P)) {
@@ -48,6 +36,7 @@ void RunningState::update() {
 		return;
 	}
 
+	/*
 	auto fighter = mngr->getHandler(ecs::hdlr::FIGHTER);
 	auto &asteroids = mngr->getEntities(ecs::grp::ASTEROIDS);
 	auto &blackHoles = mngr->getEntities(ecs::grp::BLACKHOLES);
@@ -91,15 +80,15 @@ void RunningState::update() {
 		missiles_mngr_->create_missiles(1);
 		lastTimeGeneratedMissiles_ = sdlutils().virtualTimer().currTime();
 	}
-
+	*/
 }
 
 void RunningState::enter() {
-	lastTimeGeneratedAsteroids_ = sdlutils().virtualTimer().currTime();
+	//lastTimeGeneratedAsteroids_ = sdlutils().virtualTimer().currTime();
 }
 
 void RunningState::checkCollisions() {
-	auto mngr = Game::instance()->getMngr();
+	/*auto mngr = Game::instance()->getMngr();
 	auto fighter = mngr->getHandler(ecs::hdlr::FIGHTER);
 	auto &asteroids = mngr->getEntities(ecs::grp::ASTEROIDS);
 	auto &blackHoles = mngr->getEntities(ecs::grp::BLACKHOLES);
@@ -238,13 +227,13 @@ void RunningState::checkCollisions() {
 		}
 
 	}
-
+	*/
 }
 
 void RunningState::onFigherDeath() {
-	sdlutils().soundEffects().at("explosion").play();
+	/*sdlutils().soundEffects().at("explosion").play();
 	if (fighter_mngr_->update_lives(-1) > 0)
 		Game::instance()->setState(Game::NEWROUND);
 	else
-		Game::instance()->setState(Game::GAMEOVER);
+		Game::instance()->setState(Game::GAMEOVER);*/
 }

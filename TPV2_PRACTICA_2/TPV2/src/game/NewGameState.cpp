@@ -5,20 +5,18 @@
 #include "../sdlutils/InputHandler.h"
 #include "../sdlutils/macros.h"
 #include "../sdlutils/SDLUtils.h"
-#include "FighterFacade.h"
 #include "Game.h"
 
-NewGameState::NewGameState(FighterFacade *fighter_mngr) :
+NewGameState::NewGameState() :
 		msg_(sdlutils().msgs().at("newgame")), //
-		ihdlr(ih()), //
-		fighter_mngr_(fighter_mngr) {
+		ihdlr(ih()) {
 	float x = (sdlutils().width() - msg_.width()) / 2;
 	float y = (sdlutils().height() - msg_.height()) / 2;
 	dest_ = build_sdlrect(x, y, msg_.width(), msg_.height());
 }
 
 NewGameState::~NewGameState() {
-	delete fighter_mngr_;
+	//delete fighter_mngr_;
 }
 
 void NewGameState::leave() {
@@ -26,7 +24,7 @@ void NewGameState::leave() {
 
 void NewGameState::update() {
 	if (ihdlr.keyDownEvent()) {
-		fighter_mngr_->reset_lives();
+		//fighter_mngr_->reset_lives();
 		Game::instance()->setState(Game::NEWROUND);
 	}
 

@@ -28,12 +28,12 @@ void GameOverState::update() {
 
 void GameOverState::enter() {
 	auto mngr = Game::instance()->getMngr();
-	if (mngr->getEntities(ecs::grp::ASTEROIDS).size() > 0) {
+	/*if (mngr->getEntities(ecs::grp::ASTEROIDS).size() > 0) {
 		msg_ = &sdlutils().msgs().at("gameover_lost");
 	} else {
 		msg_ = &sdlutils().msgs().at("gameover_won");
 	}
 	float x = (sdlutils().width() - msg_->width()) / 2;
 	float y = (sdlutils().height() - msg_->height()) / 2;
-	dest_ = build_sdlrect(x, y, msg_->width(), msg_->height());
+	dest_ = build_sdlrect(x, y, msg_->width(), msg_->height());*/
 }

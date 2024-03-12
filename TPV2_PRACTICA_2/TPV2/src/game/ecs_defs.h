@@ -7,8 +7,10 @@
 #define _CMPS_LIST_ \
 	TRANSFORM, \
 	IMAGE, \
+	IMAGEWITHFRAMES, \
 	STARMOTION, \
-	POINTS
+	POINTS, \
+	HEALTH
 
 // Groups list - must have at least one element
 //

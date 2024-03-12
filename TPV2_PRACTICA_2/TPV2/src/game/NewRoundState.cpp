@@ -6,19 +6,10 @@
 #include "../sdlutils/InputHandler.h"
 #include "../sdlutils/macros.h"
 #include "../sdlutils/SDLUtils.h"
-#include "AsteroidsFacade.h"
-#include "FighterFacade.h"
-#include "BlackHolesFacade.h"
-#include "MissilesFacade.h"
 #include "Game.h"
-NewRoundState::NewRoundState(AsteroidsFacade *ast_mngr,
-		FighterFacade *fighter_mngr, BlackHolesFacade* blackHoles_mngr, MissilesFacade* missiles_mngr) :
+NewRoundState::NewRoundState() :
 		msg_(sdlutils().msgs().at("newround")), //
-		ihdlr(ih()), //
-		ast_mngr_(ast_mngr), //
-		fighter_mngr_(fighter_mngr),
-		blackHoles_mngr_(blackHoles_mngr),
-		missiles_mngr_(missiles_mngr){
+		ihdlr(ih()) {
 	float x = (sdlutils().width() - msg_.width()) / 2;
 	float y = (sdlutils().height() - msg_.height()) / 2;
 	dest_ = build_sdlrect(x, y, msg_.width(), msg_.height());
@@ -30,7 +21,7 @@ NewRoundState::~NewRoundState() {
 void NewRoundState::leave() {
 }
 
-void NewRoundState::update() {
+void NewRoundState::update() {/*
 	if (ihdlr.keyDownEvent() && ihdlr.isKeyDown(SDL_SCANCODE_RETURN)) {
 		fighter_mngr_->reset_fighter();
 		ast_mngr_->remove_all_asteroids();
@@ -43,7 +34,7 @@ void NewRoundState::update() {
 	}
 	sdlutils().clearRenderer();
 	msg_.render(dest_);
-	sdlutils().presentRenderer();
+	sdlutils().presentRenderer();*/
 }
 
 void NewRoundState::enter() {

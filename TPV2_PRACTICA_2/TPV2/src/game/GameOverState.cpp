@@ -26,7 +26,7 @@ void GameOverState::update() {
 	sdlutils().presentRenderer();
 }
 
-void GameOverState::enter() {
+void GameOverState::enter() {/*
 	auto mngr = Game::instance()->getMngr();
 	if (mngr->getEntities(ecs::grp::ASTEROIDS).size() > 0) {
 		msg_ = &sdlutils().msgs().at("gameover_lost");
@@ -35,5 +35,5 @@ void GameOverState::enter() {
 	}
 	float x = (sdlutils().width() - msg_->width()) / 2;
 	float y = (sdlutils().height() - msg_->height()) / 2;
-	dest_ = build_sdlrect(x, y, msg_->width(), msg_->height());
+	dest_ = build_sdlrect(x, y, msg_->width(), msg_->height());*/
 }

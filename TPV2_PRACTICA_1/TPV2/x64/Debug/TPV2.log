@@ -1,49 +1,15 @@
-<<<<<<< HEAD
-﻿
-=======
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: El directorio Output no termina con una barra diagonal final. Esta instancia de compilación agregará la barra diagonal porque es necesaria para que se pueda evaluar correctamente el directorio Output.
-  BlackHolesUtils.cpp
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\BlackHolesUtils.cpp(27,52): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\BlackHolesUtils.cpp(27,26): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\BlackHolesUtils.cpp(27,21): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\BlackHolesUtils.cpp(28,53): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\BlackHolesUtils.cpp(28,26): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\BlackHolesUtils.cpp(28,21): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\sdlutils\SDLUtils.h(51,32): warning C4101: 'e': variable local sin referencia
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\sdlutils\SDLUtils.h(48,13): message : al compilar la función del miembro clase plantilla "T &SDLUtils::map_access_wrapper<T>::at(const std::string &)"
-          with
-          [
-              T=Texture
-          ]
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\BlackHolesUtils.cpp(51,27): message : vea la primera referencia a “SDLUtils::map_access_wrapper<Texture>::at” en “BlackHolesUtils::generateBlackHoles”
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\sdlutils\SDLUtils.h(199,30): message : Vea la referencia a la creación de una instancia de clase plantilla "SDLUtils::map_access_wrapper<Texture>" que se está compilando
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\ecs\Manager.h(86,40): warning C4244: 'argumento': conversión de '_Ty' a 'float'; posible pérdida de datos
-          with
-          [
-              _Ty=double
-          ]
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\BlackHolesUtils.cpp(50,6): message : Vea la referencia a la creación de una instancia de la función plantilla "T *ecs::Manager::addComponent<Transform,const Vector2D&,Vector2D,double,double,float>(ecs::entity_t,const Vector2D &,Vector2D &&,double &&,double &&,float &&)" que se está compilando
-          with
-          [
-              T=Transform
-          ]
-  RunningState.cpp
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\RunningState.cpp(123,8): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\RunningState.cpp(122,8): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\RunningState.cpp(175,74): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\RunningState.cpp(175,51): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\RunningState.cpp(175,36): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\RunningState.cpp(176,76): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\RunningState.cpp(176,52): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\RunningState.cpp(176,36): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\sdlutils\SDLUtils.h(51,32): warning C4101: 'e': variable local sin referencia
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\sdlutils\SDLUtils.h(48,13): message : al compilar la función del miembro clase plantilla "T &SDLUtils::map_access_wrapper<T>::at(const std::string &)"
-          with
-          [
-              T=SoundEffect
-          ]
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\game\RunningState.cpp(131,52): message : vea la primera referencia a “SDLUtils::map_access_wrapper<SoundEffect>::at” en “RunningState::checkCollisions”
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\TPV2\src\sdlutils\SDLUtils.h(201,34): message : Vea la referencia a la creación de una instancia de clase plantilla "SDLUtils::map_access_wrapper<SoundEffect>" que se está compilando
-  Generando código...
-  TPV2.vcxproj -> C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\bin\TPV2Debug.exe
->>>>>>> parent of 0698bc5 (Cambios david incluidos)
+  main.cpp
+JSON.obj : warning LNK4099: no se encontró PDB '' con 'JSON.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+JSONValue.obj : warning LNK4099: no se encontró PDB '' con 'JSONValue.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+json_demo.obj : warning LNK4099: no se encontró PDB '' con 'json_demo.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+SDLUtils.obj : warning LNK4099: no se encontró PDB '' con 'SDLUtils.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sdlutils_demo.obj : warning LNK4099: no se encontró PDB '' con 'sdlutils_demo.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+SoundEffect.obj : warning LNK4099: no se encontró PDB '' con 'SoundEffect.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+Texture.obj : warning LNK4099: no se encontró PDB '' con 'Texture.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+Collisions.obj : warning LNK4099: no se encontró PDB '' con 'Collisions.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+Vector2D.obj : warning LNK4099: no se encontró PDB '' con 'Vector2D.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+main.obj : error LNK2019: símbolo externo "private: __cdecl Game::Game(void)" (??0Game@@AEAA@XZ) sin resolver al que se hace referencia en la función "public: static class Game * __cdecl Singleton<class Game>::init<>(void)" (??$init@$$V@?$Singleton@VGame@@@@SAPEAVGame@@XZ)
+main.obj : error LNK2019: símbolo externo "public: void __cdecl Game::init(void)" (?init@Game@@QEAAXXZ) sin resolver al que se hace referencia en la función main
+main.obj : error LNK2019: símbolo externo "public: void __cdecl Game::start(void)" (?start@Game@@QEAAXXZ) sin resolver al que se hace referencia en la función main
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_1\bin\TPV2Debug.exe : fatal error LNK1120: 3 externos sin resolver

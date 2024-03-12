@@ -11,7 +11,7 @@ class FighterFacade;
 
 class NewGameState: public GameState {
 public:
-	NewGameState(FighterFacade *fighter_mngr);
+	NewGameState();
 	virtual ~NewGameState();
 	void leave() override;
 	void update() override;
@@ -20,6 +20,5 @@ private:
 	Texture &msg_;
 	SDL_Rect dest_;
 	InputHandler &ihdlr;
-	FighterFacade *fighter_mngr_;
 };
 

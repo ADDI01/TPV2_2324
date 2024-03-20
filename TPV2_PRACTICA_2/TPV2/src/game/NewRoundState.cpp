@@ -21,20 +21,14 @@ NewRoundState::~NewRoundState() {
 void NewRoundState::leave() {
 }
 
-void NewRoundState::update() {/*
+void NewRoundState::update() {
 	if (ihdlr.keyDownEvent() && ihdlr.isKeyDown(SDL_SCANCODE_RETURN)) {
-		fighter_mngr_->reset_fighter();
-		ast_mngr_->remove_all_asteroids();
-		ast_mngr_->create_asteroids(10);
-		blackHoles_mngr_->remove_all_blackHoles();
-		blackHoles_mngr_->create_blackHoles(1);
-		missiles_mngr_->remove_all_missiles();
 
 		Game::instance()->setState(Game::RUNNING);
 	}
 	sdlutils().clearRenderer();
 	msg_.render(dest_);
-	sdlutils().presentRenderer();*/
+	sdlutils().presentRenderer();
 }
 
 void NewRoundState::enter() {

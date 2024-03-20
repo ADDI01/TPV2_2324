@@ -38,8 +38,8 @@ Game::~Game() {
 void Game::init() {
 
 	// initialise the SDLUtils singleton
-	SDLUtils::init("ASTEROIDS", 800, 600,
-			"resources/config/asteroids.resources.json");
+	SDLUtils::init("Pac Man", 800, 600,
+			"resources/config/PacMan.resources.json");
 
 	/*AsteroidsFacade* ast_facede = new AsteroidsUtils();
 	FighterFacade *fighter_facede = new FighterUtils();

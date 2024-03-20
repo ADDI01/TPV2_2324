@@ -26,8 +26,8 @@ void GameOverState::update() {
 	sdlutils().presentRenderer();
 }
 
-void GameOverState::enter() {/*
-	auto mngr = Game::instance()->getMngr();
+void GameOverState::enter() {
+	/*auto mngr = Game::instance()->getMngr();
 	if (mngr->getEntities(ecs::grp::ASTEROIDS).size() > 0) {
 		msg_ = &sdlutils().msgs().at("gameover_lost");
 	} else {

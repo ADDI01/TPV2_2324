@@ -35,4 +35,5 @@
 *.db
 *.opendb
 
+*.tlog
 *vs

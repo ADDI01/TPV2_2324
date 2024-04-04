@@ -54,6 +54,7 @@
     <ClInclude Include="src\sdlutils\VirtualTimer.h" />
     <ClInclude Include="src\systems\CollisionsSystem.h" />
     <ClInclude Include="src\systems\FoodSystem.h" />
+    <ClInclude Include="src\systems\GameCtrlSystem.h" />
     <ClInclude Include="src\systems\GhostSystem.h" />
     <ClInclude Include="src\systems\ImmunitySystem.h" />
     <ClInclude Include="src\systems\PacManSystem.h" />
@@ -88,6 +89,7 @@
     <ClCompile Include="src\sdlutils\Texture.cpp" />
     <ClCompile Include="src\systems\CollisionsSystem.cpp" />
     <ClCompile Include="src\systems\FoodSystem.cpp" />
+    <ClCompile Include="src\systems\GameCtrlSystem.cpp" />
     <ClCompile Include="src\systems\GhostSystem.cpp" />
     <ClCompile Include="src\systems\ImmunitySystem.cpp" />
     <ClCompile Include="src\systems\PacManSystem.cpp" />
@@ -107,35 +109,15 @@
     <None Include="libvorbis-0.dll" />
     <None Include="libvorbisfile-3.dll" />
     <None Include="libwebp-4.dll" />
-    <None Include="resources\config\sdlutilsdemo.resources.json" />
     <None Include="SDL2.dll" />
     <None Include="SDL2_image.dll" />
     <None Include="SDL2_mixer.dll" />
     <None Include="SDL2_net.dll" />
     <None Include="SDL2_ttf.dll" />
-    <None Include="src\ecs\RAEDME.md" />
-    <None Include="src\json\RAEDME.md" />
-    <None Include="src\sdlutils\RAEDME.md" />
     <None Include="zlib1.dll" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="TPV2.vcxproj.filters.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Media Include="resources\sound\pacman_chomp.wav" />
-    <Media Include="resources\sound\pacman_death.wav" />
-    <Media Include="resources\sound\pacman_eat.wav" />
-    <Media Include="resources\sound\pacman_intro.wav" />
-    <Media Include="resources\sound\pacman_won.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="resources\images\pacman.png" />
-    <Image Include="resources\images\pacman_sprites.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Font Include="resources\fonts\ARIAL.ttf" />
-    <Font Include="resources\fonts\Capture_it.ttf" />
-    <Font Include="resources\fonts\NES-Chimera.ttf" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

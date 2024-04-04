@@ -6,7 +6,7 @@
 class CollisionsSystem: public ecs::System {
 public:
 
-	__SYSID_DECL__(ecs::sys::COLLISIONS)
+	__SYSID_DECL__(ecs::sys::COLLISIONSSYSTEM)
 
 	CollisionsSystem();
 	virtual ~CollisionsSystem();

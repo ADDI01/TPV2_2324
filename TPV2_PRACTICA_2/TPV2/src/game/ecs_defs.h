@@ -8,14 +8,12 @@
 	TRANSFORM, \
 	IMAGE, \
 	IMAGEWITHFRAMES, \
-	STARMOTION, \
-	POINTS, \
 	HEALTH
 
 // Groups list - must have at least one element
 //
 #define _GRPS_LIST_ \
-	STARS
+	GHOSTS
 
 // Handlers list - must have at least one element
 //
@@ -25,9 +23,12 @@
 // Systems list - must have at least one element
 //
 #define _SYS_LIST_ \
-    STARS, \
-	PACMAN, \
-	RENDER, \
-	GAMECTRL, \
-	COLLISIONS
+	PACMANSYSTEM, \
+	GHOSTSYSTEM, \
+	RENDERSYSTEM, \
+	COLLISIONSSYSTEM, \
+	IMMUNITYSYSTEM, \
+	FOODSYSTEM, \
+	GAMECTRL
+	
 

@@ -18,5 +18,6 @@ private:
 	void checkCollisions();
 	void onFigherDeath();
 	InputHandler &ihdlr;
+
 };
 

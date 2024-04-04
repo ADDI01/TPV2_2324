@@ -2,6 +2,7 @@
 
 #include "Game.h"
 
+#include "../components/Image.h"
 #include "../components/Transform.h"
 #include "../ecs/Manager.h"
 #include "../sdlutils/InputHandler.h"
@@ -11,6 +12,7 @@
 #include "GameOverState.h"
 #include "NewGameState.h"
 #include "NewRoundState.h"
+
 #include "PausedState.h"
 #include "RunningState.h"
 
@@ -36,8 +38,8 @@ Game::~Game() {
 void Game::init() {
 
 	// initialise the SDLUtils singleton
-	SDLUtils::init("ASTEROIDS", 800, 600,
-			"resources/config/pacman.resources.json");
+	SDLUtils::init("Pac Man", 800, 600,
+			"resources/config/PacMan.resources.json");
 
 	/*AsteroidsFacade* ast_facede = new AsteroidsUtils();
 	FighterFacade *fighter_facede = new FighterUtils();
@@ -47,9 +49,9 @@ void Game::init() {
 	fighter_facede->create_fighter();*/
 
 	paused_state_ = new PausedState();
-	runing_state_ = new RunningState(/*ast_facede, fighter_facede, blackHoles_facade, missiles_facade*/);
-	newgame_state_ = new NewGameState(/*fighter_facede*/);
-	newround_state_ = new NewRoundState(/*ast_facede, fighter_facede, blackHoles_facade, missiles_facade*/);
+	runing_state_ = new RunningState();
+	newgame_state_ = new NewGameState();
+	newround_state_ = new NewRoundState();
 	gameover_state_ = new GameOverState();
 
 	current_state_ = newgame_state_;
@@ -80,5 +82,4 @@ void Game::start() {
 		if (frameTime < 10)
 			SDL_Delay(10 - frameTime);
 	}
-
 }

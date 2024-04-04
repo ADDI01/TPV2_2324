@@ -9,7 +9,7 @@ struct Transform;
 class PacManSystem: public ecs::System {
 public:
 
-	__SYSID_DECL__(ecs::sys::PACMAN)
+	__SYSID_DECL__(ecs::sys::PACMANSYSTEM)
 
 	PacManSystem();
 	virtual ~PacManSystem();

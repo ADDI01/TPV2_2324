@@ -16,7 +16,7 @@ public:
 	void enter() override;
 private:
 	void checkCollisions();
-	void onFigherDeath();
+	void onPacManDeath();
 	InputHandler &ihdlr;
 
 };

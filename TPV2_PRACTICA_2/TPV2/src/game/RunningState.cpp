@@ -230,7 +230,7 @@ void RunningState::checkCollisions() {/*
 	*/
 }
 
-void RunningState::onFigherDeath() {/*
+void RunningState::onPacManDeath() {/*
 	sdlutils().soundEffects().at("explosion").play();
 	if (fighter_mngr_->update_lives(-1) > 0)
 		Game::instance()->setState(Game::NEWROUND);

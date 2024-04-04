@@ -1,4 +1,14 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: El directorio Output no termina con una barra diagonal final. Esta instancia de compilación agregará la barra diagonal porque es necesaria para que se pueda evaluar correctamente el directorio Output.
+  Health.cpp
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(51,32): warning C4101: 'e': variable local sin referencia
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(48,13): message : al compilar la función del miembro clase plantilla "T &SDLUtils::map_access_wrapper<T>::at(const std::string &)"
+          with
+          [
+              T=Texture
+          ]
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Health.cpp(15,18): message : vea la primera referencia a “SDLUtils::map_access_wrapper<Texture>::at” en “Health::Health”
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(199,30): message : Vea la referencia a la creación de una instancia de clase plantilla "SDLUtils::map_access_wrapper<Texture>" que se está compilando
+  Game.cpp
   NewGameState.cpp
 C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\NewGameState.cpp(13,10): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
 C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\NewGameState.cpp(14,10): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
@@ -12,4 +22,31 @@ C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\s
           ]
 C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\NewGameState.cpp(11,5): message : vea la primera referencia a “SDLUtils::map_access_wrapper<Texture>::at” en “NewGameState::NewGameState”
 C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(199,30): message : Vea la referencia a la creación de una instancia de clase plantilla "SDLUtils::map_access_wrapper<Texture>" que se está compilando
+  CollisionsSystem.cpp
+  GameCtrlSystem.cpp
+  GhostSystem.cpp
+  Vector2D.cpp
+  Generando código...
+  LINK : no se encontró C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\bin\TPV2Debug.exe o no lo generó el último vínculo incremental; ejecutando vínculo completo
+Image.obj : warning LNK4099: no se encontró PDB '' con 'Image.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+ImageWithFrames.obj : warning LNK4099: no se encontró PDB '' con 'ImageWithFrames.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+Transform.obj : warning LNK4099: no se encontró PDB '' con 'Transform.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+Manager.obj : warning LNK4099: no se encontró PDB '' con 'Manager.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+GameOverState.obj : warning LNK4099: no se encontró PDB '' con 'GameOverState.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+NewRoundState.obj : warning LNK4099: no se encontró PDB '' con 'NewRoundState.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+PausedState.obj : warning LNK4099: no se encontró PDB '' con 'PausedState.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+RunningState.obj : warning LNK4099: no se encontró PDB '' con 'RunningState.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+JSON.obj : warning LNK4099: no se encontró PDB '' con 'JSON.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+JSONValue.obj : warning LNK4099: no se encontró PDB '' con 'JSONValue.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+json_demo.obj : warning LNK4099: no se encontró PDB '' con 'json_demo.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+main.obj : warning LNK4099: no se encontró PDB '' con 'main.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+SDLUtils.obj : warning LNK4099: no se encontró PDB '' con 'SDLUtils.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sdlutils_demo.obj : warning LNK4099: no se encontró PDB '' con 'sdlutils_demo.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+SoundEffect.obj : warning LNK4099: no se encontró PDB '' con 'SoundEffect.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+Texture.obj : warning LNK4099: no se encontró PDB '' con 'Texture.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+FoodSystem.obj : warning LNK4099: no se encontró PDB '' con 'FoodSystem.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+ImmunitySystem.obj : warning LNK4099: no se encontró PDB '' con 'ImmunitySystem.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+PacManSystem.obj : warning LNK4099: no se encontró PDB '' con 'PacManSystem.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+RenderSystem.obj : warning LNK4099: no se encontró PDB '' con 'RenderSystem.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+Collisions.obj : warning LNK4099: no se encontró PDB '' con 'Collisions.obj' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
   TPV2.vcxproj -> C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\bin\TPV2Debug.exe

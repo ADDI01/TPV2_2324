@@ -3,6 +3,7 @@
 #pragma once
 #include <SDL_stdinc.h>
 
+#include "../ecs/System.h"
 #include "GameState.h"
 
 class InputHandler;
@@ -19,5 +20,11 @@ private:
 	void onPacManDeath();
 	InputHandler &ihdlr;
 
+
+	ecs::System* pacmanSys_;
+	//ecs::System* gameCtrlSys_;
+	//ecs::System* startsSys_;
+	ecs::System* renderSys_;
+	ecs::System* collisionSys_;
 };
 

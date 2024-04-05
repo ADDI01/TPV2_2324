@@ -3,6 +3,8 @@
 #pragma once
 #include "../ecs/System.h"
 
+class Transform;
+
 class CollisionsSystem: public ecs::System {
 public:
 
@@ -12,6 +14,8 @@ public:
 	virtual ~CollisionsSystem();
 	void initSystem() override;
 	void update() override;
+
+	void checkCollisionsPacmanAndWalls(Transform& pacman);
 
 };
 

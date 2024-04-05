@@ -1,12 +1,14 @@
 // This file is part of the course TPV2@UCM - Samir Genaim
 
 #include "RunningState.h"
-
 #include "../components/Transform.h"
 #include "../ecs/Manager.h"
 #include "../sdlutils/InputHandler.h"
 #include "../sdlutils/SDLUtils.h"
 #include "../utils/Collisions.h"
+#include "../systems/PacManSystem.h"
+#include "../systems/RenderSystem.h"
+#include "../systems/CollisionsSystem.h"
 #include <math.h>
 
 #include "Game.h"
@@ -14,6 +16,10 @@
 RunningState::RunningState():
 		ihdlr(ih()) //
 		{
+	auto mngr = Game::instance()->getMngr();
+	pacmanSys_ = mngr->addSystem<PacManSystem>();
+	renderSys_ = mngr->addSystem<RenderSystem>();
+	collisionSys_ = mngr->addSystem<CollisionsSystem>();
 } 
 
 RunningState::~RunningState() {
@@ -23,6 +29,11 @@ void RunningState::leave() {
 }
 
 void RunningState::update() {
+	auto mngr = Game::instance()->getMngr();
+	pacmanSys_->update();
+	collisionSys_->update();
+	renderSys_->update();
+	
 	/*
 	auto mngr = Game::instance()->getMngr();
 
@@ -82,6 +93,8 @@ void RunningState::update() {
 		lastTimeGeneratedMissiles_ = sdlutils().virtualTimer().currTime();
 	}
 	*/
+
+	
 }
 
 void RunningState::enter() {

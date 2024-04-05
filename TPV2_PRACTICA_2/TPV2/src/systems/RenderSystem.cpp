@@ -1,6 +1,9 @@
 // This file is part of the course TPV2@UCM - Samir Genaim
 
 #include "RenderSystem.h"
+#include "../sdlutils/SDLUtils.h"
+#include "../ecs/Manager.h"
+#include "../components/Image.h"
 
 RenderSystem::RenderSystem() {
 
@@ -13,15 +16,14 @@ void RenderSystem::initSystem() {
 }
 
 void RenderSystem::update() {
+	sdlutils().clearRenderer();
 	drawPacMan();
+	sdlutils().presentRenderer();
 }
 
-void RenderSystem::drawPacMan() {/*
-	auto e = mngr_->getHandler(ecs::hdlr::PACMAN);
-	auto tr = mngr_->getComponent<Transform>(e);
-	auto tex = mngr_->getComponent<Image>(e)->tex_;
-	draw(tr, tex);*/
-
+void RenderSystem::drawPacMan() {
+	ecs::Entity* pacman = mngr_->getHandler(ecs::hdlr::PACMAN);
+	mngr_->render(pacman);
 }
 
 void RenderSystem::draw(Transform *tr, Texture *tex) {

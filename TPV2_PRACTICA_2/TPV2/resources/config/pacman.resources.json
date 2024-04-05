@@ -5,11 +5,12 @@
     { "id" : "ARIAL24", "file" : "resources/fonts/ARIAL.ttf", "size": 24 },
     { "id" : "ARIAL48", "file" : "resources/fonts/ARIAL.ttf", "size": 48 }
   ],
-  
-  "images" : [
-    { "id" : "pacman", "file" : "resources/images/pacman.png" },
-    { "id" : "pacman_sprites", "file" : "resources/images/pacman_sprites.png"}
-  ],
+
+    "images": [
+        {"id": "pacman","file": "resources/images/pacman.png"},
+        {"id": "pacman_sprites","file": "resources/images/pacman_sprites.png"},
+        {"id": "heart","file": "resources/images/pacman.png"}
+    ],
   
   "messages" : [
     { "id" : "newgame", "text" : "Press any key to start a new game.", "font" : "ARIAL24", "color" : "0x0000ffff" },

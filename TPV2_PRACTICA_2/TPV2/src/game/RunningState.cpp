@@ -9,6 +9,7 @@
 #include "../systems/PacManSystem.h"
 #include "../systems/RenderSystem.h"
 #include "../systems/CollisionsSystem.h"
+#include "../systems/PacManSystem.h"
 #include <math.h>
 
 #include "Game.h"
@@ -26,6 +27,7 @@ RunningState::~RunningState() {
 }
 
 void RunningState::leave() {
+	
 }
 
 void RunningState::update() {
@@ -243,10 +245,11 @@ void RunningState::checkCollisions() {/*
 	*/
 }
 
-void RunningState::onPacManDeath() {/*
+void RunningState::onPacManDeath() {
+	auto mngr = Game::instance()->getMngr();
 	sdlutils().soundEffects().at("explosion").play();
-	if (fighter_mngr_->update_lives(-1) > 0)
+	if (pacmanSys_->update_lives(-1) > 0)
 		Game::instance()->setState(Game::NEWROUND);
 	else
-		Game::instance()->setState(Game::GAMEOVER);*/
+		Game::instance()->setState(Game::GAMEOVER);
 }

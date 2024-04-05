@@ -15,6 +15,7 @@ public:
 	virtual ~PacManSystem();
 	void initSystem() override;
 	void update() override;
+	int update_lives(int l);
 private:
 	Transform *pmTR_;
 };

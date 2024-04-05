@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include "game/Game.h"
+#include "utils/checkML.h"
 
 int main(int, char**) {
 	try {
@@ -18,7 +19,7 @@ int main(int, char**) {
 	} catch (...) {
 		std::cerr << "Caught and exception of unknown type ...";
 	}
-
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 	return 0;
 }
 

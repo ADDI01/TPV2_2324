@@ -32,7 +32,17 @@ Game::Game() :
 
 Game::~Game() {
 	delete mngr_;
-	delete current_state_;
+	mngr_ = nullptr;
+	delete paused_state_;
+	paused_state_ = nullptr;
+	delete runing_state_;
+	runing_state_ = nullptr;
+	delete newgame_state_;
+	newgame_state_ = nullptr;
+	delete newround_state_;
+	newround_state_ = nullptr;
+	delete gameover_state_;
+	gameover_state_ = nullptr;
 }
 
 void Game::init() {

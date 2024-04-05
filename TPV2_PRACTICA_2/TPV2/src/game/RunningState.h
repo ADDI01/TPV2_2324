@@ -7,6 +7,7 @@
 #include "GameState.h"
 
 class InputHandler;
+class PacManSystem;
 
 class RunningState: public GameState {
 public:
@@ -21,7 +22,7 @@ private:
 	InputHandler &ihdlr;
 
 
-	ecs::System* pacmanSys_;
+	PacManSystem* pacmanSys_;
 	//ecs::System* gameCtrlSys_;
 	//ecs::System* startsSys_;
 	ecs::System* renderSys_;

@@ -17,6 +17,7 @@ public:
 	void update() override;
 private:
 	void drawPacMan();
+	void drawGhosts();
 	void draw(Transform *tr, Texture *tex);
 };
 

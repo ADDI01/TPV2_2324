@@ -17,6 +17,7 @@ public:
 	void update() override;
 	int update_lives(int l);
 private:
+	void createPacman();
 	Transform *pmTR_;
 };
 

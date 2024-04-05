@@ -8,6 +8,7 @@
 
 class InputHandler;
 class PacManSystem;
+class GhostSystem;
 
 class RunningState: public GameState {
 public:
@@ -24,7 +25,7 @@ private:
 
 	PacManSystem* pacmanSys_;
 	//ecs::System* gameCtrlSys_;
-	//ecs::System* startsSys_;
+	GhostSystem* ghostSystem_;
 	ecs::System* renderSys_;
 	ecs::System* collisionSys_;
 };

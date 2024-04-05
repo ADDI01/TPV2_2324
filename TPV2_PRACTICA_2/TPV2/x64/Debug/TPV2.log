@@ -4,26 +4,14 @@ C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\s
 C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.h(8,7): message : vea la declaración de 'Transform'
 C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\RenderSystem.h(7,17): warning C4099: 'Transform': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
 C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\PacManSystem.h(7,8): message : vea la declaración de 'Transform'
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\GhostSystem.h(5,17): warning C4099: 'Transform': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\CollisionsSystem.h(6,7): message : vea la declaración de 'Transform'
 C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(51,32): warning C4101: 'e': variable local sin referencia
 C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(48,13): message : al compilar la función del miembro clase plantilla "T &SDLUtils::map_access_wrapper<T>::at(const std::string &)"
           with
           [
               T=SoundEffect
           ]
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\RunningState.cpp(250,48): message : vea la primera referencia a “SDLUtils::map_access_wrapper<SoundEffect>::at” en “RunningState::onPacManDeath”
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\RunningState.cpp(258,48): message : vea la primera referencia a “SDLUtils::map_access_wrapper<SoundEffect>::at” en “RunningState::onPacManDeath”
 C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(201,34): message : Vea la referencia a la creación de una instancia de clase plantilla "SDLUtils::map_access_wrapper<SoundEffect>" que se está compilando
-  PacManSystem.cpp
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\ImageWithFrames.h(9,16): warning C4099: 'Transform': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\PacManSystem.h(7,8): message : vea la declaración de 'Transform'
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.h(8,16): warning C4099: 'Transform': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.h(8,7): message : vea la declaración de 'Transform'
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(51,32): warning C4101: 'e': variable local sin referencia
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(48,13): message : al compilar la función del miembro clase plantilla "T &SDLUtils::map_access_wrapper<T>::at(const std::string &)"
-          with
-          [
-              T=Texture
-          ]
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\PacManSystem.cpp(31,38): message : vea la primera referencia a “SDLUtils::map_access_wrapper<Texture>::at” en “PacManSystem::initSystem”
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(199,30): message : Vea la referencia a la creación de una instancia de clase plantilla "SDLUtils::map_access_wrapper<Texture>" que se está compilando
-  Generando código...
   TPV2.vcxproj -> C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\bin\TPV2Debug.exe

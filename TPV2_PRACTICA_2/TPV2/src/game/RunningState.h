@@ -12,6 +12,7 @@ class GhostSystem;
 class FoodSystem;
 class RenderSystem;
 class CollisionsSystem;
+class ImmunitySystem;
 
 class RunningState: public GameState {
 public:
@@ -31,5 +32,6 @@ private:
 	GhostSystem* ghostSystem_;
 	RenderSystem* renderSys_;
 	CollisionsSystem* collisionSys_;
+	ImmunitySystem* immunitySys_;
 };
 

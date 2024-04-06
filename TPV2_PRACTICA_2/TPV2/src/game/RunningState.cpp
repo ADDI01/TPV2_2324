@@ -12,6 +12,7 @@
 #include "../systems/PacManSystem.h"
 #include "../systems/GhostSystem.h"
 #include "../systems/FoodSystem.h"
+#include "../systems/ImmunitySystem.h"
 #include <math.h>
 
 #include "Game.h"
@@ -25,6 +26,7 @@ RunningState::RunningState():
 	collisionSys_ = mngr->addSystem<CollisionsSystem>();
 	ghostSystem_ = mngr->addSystem<GhostSystem>();
 	foodSys_ = mngr->addSystem<FoodSystem>();
+	immunitySys_ = mngr->addSystem<ImmunitySystem>();
 } 
 
 RunningState::~RunningState() {
@@ -40,6 +42,7 @@ void RunningState::update() {
 	auto mngr = Game::instance()->getMngr();
 	pacmanSys_->update();
 	ghostSystem_->update();
+	immunitySys_->update();
 	collisionSys_->update();
 	renderSys_->update();
 	foodSys_->update();

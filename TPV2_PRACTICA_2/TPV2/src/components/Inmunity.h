@@ -13,6 +13,7 @@ public:
 	Inmunity();
 	virtual ~Inmunity();
 	void setInmunity(bool inm) { isInmune = inm; }
+	bool getInmunnity() const { return isInmune; }
 
 private:
 	bool isInmune;

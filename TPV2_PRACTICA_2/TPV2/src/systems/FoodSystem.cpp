@@ -30,12 +30,11 @@ void FoodSystem::update()
 
 			foodImg->setNewFrame(1, 7, 1, 1);
 			foodMir->setMiraculousity(true);
-			foodMir.set
+			//foodMir.set
 			foodMir->setMiraculousTimer(sdlutils().rand().nextInt(1, 6));
 		}
 		
-		if(foodMir->isMiraculous() && sdlutils().virtualTimer().currTime() >= 
-				)
+		//if(foodMir->isMiraculous() && sdlutils().virtualTimer().currTime() >=)
 	}
 }
 

@@ -14,7 +14,7 @@ public:
 	Miraculous(Uint32 time);
 	virtual ~Miraculous();
 
-	bool isMiraculous() { return isMiraculous; }
+	bool isMiraculous() { return isMiraculous_; }
 	Uint32 getTimeOfCreation() const { return timeOfCreation; }
 	float getMiraculousCD() const { return miraculousCD; }
 	
@@ -24,7 +24,7 @@ public:
 	void setStartOfMiraculousTime(float startMrTm);
 
 private:
-	bool isMiraculous; //Si es o no milagrosa
+	bool isMiraculous_; //Si es o no milagrosa
 	Uint32 timeOfCreation; //Guarda el momento en el que se creo la fruta
 	Uint32 startOfMiraculousTime; //Momento que empieza a ser milagrosa
 	float miraculousCD; //Tiempo  hasta hacerse milagrosa

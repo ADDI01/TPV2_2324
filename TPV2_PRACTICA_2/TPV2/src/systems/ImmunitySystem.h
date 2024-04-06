@@ -17,6 +17,7 @@ public:
 	virtual void recieve(const Message& m);
 
 private:
-	Uint32 startInmunityTime;
+	int startInmunityTime;
+	bool immunity;
 };
 

@@ -20,28 +20,25 @@ void ImmunitySystem::initSystem()
 
 void ImmunitySystem::update()
 {
-	Uint32 currInmunityTime = sdlutils().currRealTime() - startInmunityTime;
+	if (immunity) {
+		Uint32 currInmunityTime = sdlutils().currRealTime() - startInmunityTime;
 
-	if (currInmunityTime >= 10000) {
-		Message m;
-		m.id = _m_IMMUNITY_END;
+		if (currInmunityTime >= 5000) {
+			Message m;
+			m.id = _m_IMMUNITY_END;
+		}
 	}
 }
 
 void ImmunitySystem::recieve(const Message& m)
 {
-	ecs::Entity* pacman = mngr_->getHandler(ecs::hdlr::PACMAN);
-	Inmunity* pmInm = mngr_->getComponent<Inmunity>(pacman);
-
-	std::vector<ecs::Entity*> ghosts = mngr_->getEntities(ecs::grp::GHOSTS);
-
 	switch (m.id) {
 	case _m_IMMUNITY_START:
 		startInmunityTime = sdlutils().currRealTime();
-		pmInm->setInmunity(true);
+		immunity = true;
 		break;
 	case _m_IMMUNITY_END:
-		pmInm->setInmunity(false);
+		immunity = false;
 		break;
 	default:
 		break;

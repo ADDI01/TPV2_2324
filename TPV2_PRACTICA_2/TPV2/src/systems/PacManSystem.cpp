@@ -66,11 +66,15 @@ int PacManSystem::update_lives(int l)
 
 void PacManSystem::recieve(const Message& m)
 {
+
+	ecs::Entity* pacman = mngr_->getHandler(ecs::hdlr::PACMAN);
+	Inmunity* pmInm = mngr_->getComponent<Inmunity>(pacman);
+
 	switch (m.id)
 	{
 	case _m_PACMAN_GHOST_COLLISION:
 		//sdlutils().soundEffects().at("explosion").play();
-		if (mngr_->getComponent<Inmunity>(mngr_->getHandler(ecs::hdlr::PACMAN))) {
+		if (mngr_->getComponent<Inmunity>(mngr_->getHandler(ecs::hdlr::PACMAN))->getInmunnity()) {
 			if (update_lives(-1) > 0) {
 				Message m2;
 					m2.id = _m_ROUND_OVER;
@@ -99,6 +103,12 @@ void PacManSystem::recieve(const Message& m)
 		break;
 	case _m_NEW_GAME:
 		mngr_->getComponent<Health>(mngr_->getHandler(ecs::hdlr::PACMAN))->set_lives(3);
+		break;
+	case _m_IMMUNITY_START:
+		pmInm->setInmunity(true);
+		break;
+	case _m_IMMUNITY_END:
+		pmInm->setInmunity(false);
 		break;
 	default:
 		break;

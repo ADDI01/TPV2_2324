@@ -14,12 +14,13 @@ public:
 	Miraculous(Uint32 time);
 	virtual ~Miraculous();
 
-	bool isMiraculous() { return isMiraculous; }
+	bool getIsMiraculous() const { return isMiraculous; }
 	Uint32 getTimeOfCreation() const { return timeOfCreation; }
 	float getMiraculousCD() const { return miraculousCD; }
-	
+	float getMiraculousRemaining() const { return miraculousRemaining; }
 
 	void setMiraculousity(bool mir);
+	void setTimeOfCreation(Uint32 time);
 	void setMiraculousTimer(float mirTm);
 	void setStartOfMiraculousTime(float startMrTm);
 

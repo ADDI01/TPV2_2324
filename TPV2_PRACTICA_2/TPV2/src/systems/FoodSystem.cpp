@@ -23,19 +23,24 @@ void FoodSystem::update()
 
 	for (ecs::Entity* food : foods) {
 		Miraculous* foodMir = mngr_->getComponent<Miraculous>(food);
+		ImageWithFrames* foodImg = mngr_->getComponent<ImageWithFrames>(food);
 
-		if (!foodMir->isMiraculous() && sdlutils().virtualTimer().currTime() >=
-				foodMir->getTimeOfCreation() + foodMir->getMiraculousCD()) {
-			ImageWithFrames* foodImg = mngr_->getComponent<ImageWithFrames>(food);
-
-			foodImg->setNewFrame(1, 7, 1, 1);
+		if (!foodMir->getIsMiraculous() && sdlutils().virtualTimer().currTime() >=
+				foodMir->getTimeOfCreation() + foodMir->getMiraculousCD()) { //De estado normal a milagroso
+			
+			foodImg->setNewFrame(7, 1, 1, 1);
 			foodMir->setMiraculousity(true);
-			foodMir.set
+			foodMir->setStartOfMiraculousTime(sdlutils().virtualTimer().currTime());
 			foodMir->setMiraculousTimer(sdlutils().rand().nextInt(1, 6));
 		}
 		
-		if(foodMir->isMiraculous() && sdlutils().virtualTimer().currTime() >= 
-				)
+		if (foodMir->getIsMiraculous() && sdlutils().virtualTimer().currTime() >=
+				foodMir->getMiraculousRemaining() + foodMir->getMiraculousRemaining()) { //De estado milagroso a normal
+
+			foodImg->setNewFrame(4, 1, 1, 1);
+			foodMir->setMiraculousity(false);
+			foodMir->setTimeOfCreation(sdlutils().virtualTimer().currTime());
+		}
 	}
 }
 

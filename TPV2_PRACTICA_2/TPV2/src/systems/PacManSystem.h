@@ -17,6 +17,7 @@ public:
 	void update() override;
 	int update_lives(int l);
 	virtual void recieve(const Message& m);
+	void killPacman();
 private:
 	void createPacman();
 	Transform *pmTR_;

@@ -8,7 +8,10 @@
 #include "../sdlutils/SDLUtils.h"
 #include "Game.h"
 GameOverState::GameOverState() :
-		msg_(nullptr), dest_(), ihdlr(ih()) {
+		msg_(&sdlutils().msgs().at("gameover_lost")), ihdlr(ih()) {
+	float x = (sdlutils().width() - msg_->width()) / 2;
+	float y = (sdlutils().height() - msg_->height()) / 2;
+	dest_ = build_sdlrect(x, y, msg_->width(), msg_->height());
 }
 
 GameOverState::~GameOverState() {

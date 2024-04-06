@@ -69,14 +69,36 @@ void PacManSystem::recieve(const Message& m)
 	{
 	case _m_PACMAN_GHOST_COLLISION:
 		//sdlutils().soundEffects().at("explosion").play();
-		if (update_lives(-1) > 0)
-			Game::instance()->setState(Game::NEWROUND);
-		else
-			Game::instance()->setState(Game::GAMEOVER);
-
+		if (update_lives(-1) > 0) {
+			Message m2;
+			m2.id = _m_ROUND_OVER;
+			mngr_->send(m2);
+		}
+		else {
+			Message m2;
+			m2.id = _m_GAME_OVER;
+			mngr_->send(m2);
+		}
+			
+		break;
+	case _m_ROUND_OVER:
+		Game::instance()->setState(Game::NEWROUND);
+		break;
+	case _m_GAME_OVER:
+		mngr_->getComponent<Health>(mngr_->getHandler(ecs::hdlr::PACMAN))->set_lives(3);
+		Game::instance()->setState(Game::GAMEOVER);
+		break;
+	case _m_NEW_GAME:
+		mngr_->getComponent<Health>(mngr_->getHandler(ecs::hdlr::PACMAN))->set_lives(3);
+		break;
 	default:
 		break;
 	}
+}
+
+void PacManSystem::killPacman()
+{
+	mngr_->setAlive(mngr_->getHandler(ecs::hdlr::PACMAN),false);
 }
 
 void PacManSystem::createPacman()

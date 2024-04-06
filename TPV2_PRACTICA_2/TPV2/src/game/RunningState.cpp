@@ -11,6 +11,7 @@
 #include "../systems/CollisionsSystem.h"
 #include "../systems/PacManSystem.h"
 #include "../systems/GhostSystem.h"
+#include "../systems/FoodSystem.h"
 #include <math.h>
 
 #include "Game.h"
@@ -23,6 +24,7 @@ RunningState::RunningState():
 	renderSys_ = mngr->addSystem<RenderSystem>();
 	collisionSys_ = mngr->addSystem<CollisionsSystem>();
 	ghostSystem_ = mngr->addSystem<GhostSystem>();
+	foodSys_ = mngr->addSystem<FoodSystem>();
 } 
 
 RunningState::~RunningState() {

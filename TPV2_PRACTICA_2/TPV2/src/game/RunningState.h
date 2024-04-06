@@ -9,6 +9,9 @@
 class InputHandler;
 class PacManSystem;
 class GhostSystem;
+class FoodSystem;
+class RenderSystem;
+class CollisionsSystem;
 
 class RunningState: public GameState {
 public:
@@ -24,9 +27,9 @@ private:
 
 
 	PacManSystem* pacmanSys_;
-	//ecs::System* gameCtrlSys_;
+	FoodSystem* foodSys_;
 	GhostSystem* ghostSystem_;
-	ecs::System* renderSys_;
-	ecs::System* collisionSys_;
+	RenderSystem* renderSys_;
+	CollisionsSystem* collisionSys_;
 };
 

@@ -5,6 +5,7 @@
 #include "../components/ImageWithFrames.h"
 #include "../components/Transform.h"
 #include "../components/Health.h"
+#include "../components/Inmunity.h"
 #include "../ecs/Manager.h"
 #include "../sdlutils/InputHandler.h"
 #include "../sdlutils/SDLUtils.h"
@@ -119,5 +120,6 @@ void PacManSystem::createPacman()
 	pmTR_->init(Vector2D(x, y), Vector2D(), s, s, 0.0f);
 	mngr_->addComponent<ImageWithFrames>(pacman, &sdlutils().images().at("pacman_sprites"), 8, 8, 0, 0, 128, 128, 0, 0, 1, 4);
 	mngr_->addComponent<Health>(pacman, 3);
+	mngr_->addComponent<Inmunity>(pacman);
 }
 

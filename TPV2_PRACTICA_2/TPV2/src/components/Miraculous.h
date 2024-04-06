@@ -15,7 +15,7 @@ public:
 	void initComponent() override;
 	void render() override;
 
-	void setMiracolousity(bool mir) { isMiraculous = mir; };
+	void setMiraculousity(bool mir) { isMiraculous = mir; };
 
 private:
 	bool isMiraculous;

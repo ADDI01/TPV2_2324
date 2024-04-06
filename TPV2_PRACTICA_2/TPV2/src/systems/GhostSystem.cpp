@@ -48,6 +48,9 @@ void GhostSystem::recieve(const Message& m)
 {
 	switch (m.id)
 	{
+	case _m_ROUND_START:
+		lastTimeGeneratedGhost_ = sdlutils().virtualTimer().currTime();
+		break;
 	case _m_PACMAN_GHOST_COLLISION:
 		onGhostDie(m.pacman_ghost_collision_data.ghost);
 		break;

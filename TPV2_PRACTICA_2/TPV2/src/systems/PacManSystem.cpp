@@ -70,18 +70,19 @@ void PacManSystem::recieve(const Message& m)
 	{
 	case _m_PACMAN_GHOST_COLLISION:
 		//sdlutils().soundEffects().at("explosion").play();
-		if (update_lives(-1) > 0) {
-			Message m2;
-			m2.id = _m_ROUND_OVER;
-			mngr_->send(m2);
+		if (mngr_->getComponent<Inmunity>(mngr_->getHandler(ecs::hdlr::PACMAN))) {
+			if (update_lives(-1) > 0) {
+				Message m2;
+					m2.id = _m_ROUND_OVER;
+					mngr_->send(m2);
+			}
+			else {
+				Message m2;
+					m2.id = _m_GAME_OVER;
+					m2.game_over_data.win = false;
+					mngr_->send(m2);
+			}
 		}
-		else {
-			Message m2;
-			m2.id = _m_GAME_OVER;
-			m2.game_over_data.win = false;
-			mngr_->send(m2);
-		}
-			
 		break;
 	case _m_ROUND_OVER:
 		Game::instance()->setState(Game::NEWROUND);
@@ -94,6 +95,7 @@ void PacManSystem::recieve(const Message& m)
 		break;
 	case _m_ROUND_START:
 		pmTR_->setPos(Vector2D((sdlutils().width() - pmTR_->getWidth()) / 2.0f, (sdlutils().height() - pmTR_->getHeight()) / 2.0f));
+		pmTR_->getVel().set(0, 0);
 		break;
 	case _m_NEW_GAME:
 		mngr_->getComponent<Health>(mngr_->getHandler(ecs::hdlr::PACMAN))->set_lives(3);

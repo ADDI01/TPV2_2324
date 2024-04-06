@@ -85,8 +85,10 @@ void PacManSystem::recieve(const Message& m)
 		Game::instance()->setState(Game::NEWROUND);
 		break;
 	case _m_GAME_OVER:
-		mngr_->getComponent<Health>(mngr_->getHandler(ecs::hdlr::PACMAN))->set_lives(3);
 		Game::instance()->setState(Game::GAMEOVER);
+		break;
+	case _m_ROUND_START:
+		pmTR_->setPos(Vector2D((sdlutils().width() - pmTR_->getWidth()) / 2.0f, (sdlutils().height() - pmTR_->getHeight()) / 2.0f));
 		break;
 	case _m_NEW_GAME:
 		mngr_->getComponent<Health>(mngr_->getHandler(ecs::hdlr::PACMAN))->set_lives(3);

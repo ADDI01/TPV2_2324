@@ -11,6 +11,7 @@
 #include "../systems/CollisionsSystem.h"
 #include "../systems/PacManSystem.h"
 #include "../systems/GhostSystem.h"
+#include "../systems/FoodSystem.h"
 #include <math.h>
 
 #include "Game.h"
@@ -23,15 +24,14 @@ RunningState::RunningState():
 	renderSys_ = mngr->addSystem<RenderSystem>();
 	collisionSys_ = mngr->addSystem<CollisionsSystem>();
 	ghostSystem_ = mngr->addSystem<GhostSystem>();
+	foodSys_ = mngr->addSystem<FoodSystem>();
 } 
 
 RunningState::~RunningState() {
 }
 
 void RunningState::leave() {
-	auto mngr = Game::instance()->getMngr();
 	ghostSystem_->killAllGhosts();
-	//mngr->refresh();
 }
 
 void RunningState::update() {
@@ -112,6 +112,7 @@ void RunningState::update() {
 }
 
 void RunningState::enter() {
+	Game::instance()->getMngr()->flushMessages();
 }
 
 void RunningState::checkCollisions() {/*

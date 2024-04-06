@@ -16,7 +16,6 @@ GhostSystem::~GhostSystem()
 
 void GhostSystem::initSystem()
 {
-	createGhost();
 }
 
 void GhostSystem::update()

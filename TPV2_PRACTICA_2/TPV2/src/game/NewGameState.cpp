@@ -5,6 +5,8 @@
 #include "../sdlutils/InputHandler.h"
 #include "../sdlutils/macros.h"
 #include "../sdlutils/SDLUtils.h"
+#include "../ecs/messages.h"
+#include"../ecs/Manager.h"
 #include "Game.h"
 
 NewGameState::NewGameState():
@@ -19,6 +21,9 @@ NewGameState::~NewGameState() {
 }
 
 void NewGameState::leave() {
+	Message m;
+	m.id = _m_NEW_GAME;
+	Game::instance()->getMngr()->send(m,true);
 }
 
 void NewGameState::update() {

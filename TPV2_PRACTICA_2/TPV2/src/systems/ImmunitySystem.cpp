@@ -35,7 +35,7 @@ void ImmunitySystem::recieve(const Message& m)
 
 	switch (m.id) {
 	case _m_IMMUNITY_START:
-		Uint32 startTime = sdlutils().currRealTime();
+		//Uint32 startTime = sdlutils().currRealTime();
 		pmInm->setInmunity(true);
 		break;
 	case _m_IMMUNITY_END:

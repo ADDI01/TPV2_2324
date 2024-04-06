@@ -31,7 +31,8 @@ RunningState::~RunningState() {
 }
 
 void RunningState::leave() {
-	ghostSystem_->killAllGhosts();
+	auto mngr = Game::instance()->getMngr();
+	mngr->refresh();
 }
 
 void RunningState::update() {

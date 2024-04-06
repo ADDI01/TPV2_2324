@@ -14,6 +14,8 @@ public:
 private:
 	void generateGrid();
 	void createFood(float x, float y, int s);
+	void eatAllFoods();
+	void eatFood(ecs::Entity* food);
 	const int cols = 8;
 	const int rows = 6;
 	int nFoods = 0;

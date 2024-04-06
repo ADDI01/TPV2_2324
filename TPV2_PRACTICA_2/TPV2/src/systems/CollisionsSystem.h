@@ -20,5 +20,6 @@ public:
 	void checkCollisionsPacmanAndWalls(Transform& pacman);
 	void checkCollisionsGhostsAndWalls(std::vector<ecs::Entity*> ghosts);
 	void checkCollisionsPacmanAndGhosts(Transform& pacman, std::vector<ecs::Entity*> ghosts);
+	void checkCollisionsPacmanAndFoods(Transform& pacman, std::vector<ecs::Entity*> foods);
 };
 

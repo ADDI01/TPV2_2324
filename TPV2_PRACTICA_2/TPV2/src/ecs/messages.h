@@ -26,10 +26,17 @@ struct Message {
 
 	union {
 
-		// _m_STAR_EATEN
 		struct {
-			ecs::Entity* e;
+			ecs::Entity* ghost;
 		} pacman_ghost_collision_data;
+
+		struct {
+			ecs::Entity* food;
+		} pacman_food_collision_data;
+
+		struct {
+			bool win;
+		} game_over_data;
 	};
 };
  

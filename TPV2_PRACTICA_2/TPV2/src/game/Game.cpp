@@ -12,6 +12,7 @@
 #include "GameOverState.h"
 #include "NewGameState.h"
 #include "NewRoundState.h"
+#include "WinState.h"
 
 #include "PausedState.h"
 #include "RunningState.h"
@@ -43,6 +44,8 @@ Game::~Game() {
 	newround_state_ = nullptr;
 	delete gameover_state_;
 	gameover_state_ = nullptr;
+	delete win_state_;
+	win_state_ = nullptr;
 }
 
 void Game::init() {
@@ -63,6 +66,7 @@ void Game::init() {
 	newgame_state_ = new NewGameState();
 	newround_state_ = new NewRoundState();
 	gameover_state_ = new GameOverState();
+	win_state_ = new WinState();
 
 	current_state_ = newgame_state_;
 }

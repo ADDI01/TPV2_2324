@@ -68,6 +68,7 @@
     <ClInclude Include="src\utils\ptr_iterator.h" />
     <ClInclude Include="src\utils\Singleton.h" />
     <ClInclude Include="src\utils\Vector2D.h" />
+    <ClInclude Include="src\game\WinState.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\components\Miraculous.cpp" />
@@ -100,6 +101,7 @@
     <ClCompile Include="src\systems\RenderSystem.cpp" />
     <ClCompile Include="src\utils\Collisions.cpp" />
     <ClCompile Include="src\utils\Vector2D.cpp" />
+    <ClCompile Include="src\game\WinState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="libFLAC-8.dll" />

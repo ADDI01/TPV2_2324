@@ -78,6 +78,7 @@ void PacManSystem::recieve(const Message& m)
 		else {
 			Message m2;
 			m2.id = _m_GAME_OVER;
+			m2.game_over_data.win = false;
 			mngr_->send(m2);
 		}
 			
@@ -86,7 +87,10 @@ void PacManSystem::recieve(const Message& m)
 		Game::instance()->setState(Game::NEWROUND);
 		break;
 	case _m_GAME_OVER:
-		Game::instance()->setState(Game::GAMEOVER);
+		if(m.game_over_data.win)
+			Game::instance()->setState(Game::WIN);
+		else
+			Game::instance()->setState(Game::GAMEOVER);
 		break;
 	case _m_ROUND_START:
 		pmTR_->setPos(Vector2D((sdlutils().width() - pmTR_->getWidth()) / 2.0f, (sdlutils().height() - pmTR_->getHeight()) / 2.0f));

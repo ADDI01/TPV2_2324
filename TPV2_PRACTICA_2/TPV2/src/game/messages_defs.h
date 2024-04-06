@@ -22,7 +22,7 @@ struct Message {
 
 		// _m_STAR_EATEN
 		struct {
-			ecs::entity_t e;
+			ecs::entity_t ghost;
 		} star_eaten_data;
 
 		// _m_CREATE_STARS

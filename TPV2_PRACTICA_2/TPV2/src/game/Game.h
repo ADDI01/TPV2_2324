@@ -17,7 +17,7 @@ class Game: public Singleton<Game> {
 	Game();
 public:
 	enum State {
-		RUNNING, PAUSED, NEWGAME, NEWROUND, GAMEOVER
+		RUNNING, PAUSED, NEWGAME, NEWROUND, GAMEOVER, WIN
 	};
 	virtual ~Game();
 	void init();
@@ -43,6 +43,9 @@ public:
 		case GAMEOVER:
 			new_state = gameover_state_;
 			break;
+		case WIN:
+			new_state = win_state_;
+			break;
 		default:
 			break;
 		}
@@ -60,5 +63,6 @@ private:
 	GameState *newgame_state_;
 	GameState *newround_state_;
 	GameState *gameover_state_;
+	GameState* win_state_;
 };
 

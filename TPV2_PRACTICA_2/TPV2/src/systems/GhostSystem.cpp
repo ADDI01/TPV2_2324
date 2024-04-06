@@ -49,8 +49,15 @@ void GhostSystem::recieve(const Message& m)
 	switch (m.id)
 	{
 	case _m_PACMAN_GHOST_COLLISION:
-		onGhostDie(m.pacman_ghost_collision_data.e);
+		onGhostDie(m.pacman_ghost_collision_data.ghost);
+		break;
 
+	case   _m_ROUND_OVER:
+		killAllGhosts();
+		break;
+	case  _m_GAME_OVER:
+		killAllGhosts();
+		break;
 	default:
 		break;
 	}

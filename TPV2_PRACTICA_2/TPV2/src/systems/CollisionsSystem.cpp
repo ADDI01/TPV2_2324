@@ -24,9 +24,11 @@ void CollisionsSystem::update() {
 	ecs::Entity* pacman = mngr_->getHandler(ecs::hdlr::PACMAN);
 	Transform* pmTR = mngr_->getComponent<Transform>(pacman);
 	std::vector<ecs::Entity*> ghosts = mngr_->getEntities(ecs::grp::GHOSTS);
+	std::vector<ecs::Entity*> foods = mngr_->getEntities(ecs::grp::FOODS);
 	checkCollisionsPacmanAndWalls(*pmTR);
 	checkCollisionsGhostsAndWalls(ghosts);
 	checkCollisionsPacmanAndGhosts(*pmTR, ghosts);
+	checkCollisionsPacmanAndFoods(*pmTR, foods);
 }
 
 void CollisionsSystem::checkCollisionsPacmanAndWalls(Transform& pmTR)
@@ -91,7 +93,28 @@ void CollisionsSystem::checkCollisionsPacmanAndGhosts(Transform& pacmanTR, std::
 			ghostTR->getRot())) {
 			Message m;
 			m.id = _m_PACMAN_GHOST_COLLISION;
-			m.pacman_ghost_collision_data.e = ghost;
+			m.pacman_ghost_collision_data.ghost = ghost;
+			mngr_->send(m);
+		}
+	}
+}
+
+void CollisionsSystem::checkCollisionsPacmanAndFoods(Transform& pacmanTR, std::vector<ecs::Entity*> foods)
+{
+	for (ecs::Entity* food : foods) {
+		Transform* foodTR = mngr_->getComponent<Transform>(food);
+		if (Collisions::collidesWithRotation( //
+			pacmanTR.getPos(), //
+			pacmanTR.getWidth(), //
+			pacmanTR.getHeight(), //
+			pacmanTR.getRot(), //
+			foodTR->getPos(), //
+			foodTR->getWidth(), //
+			foodTR->getHeight(), //
+			foodTR->getRot())) {
+			Message m;
+			m.id = _m_PACMAN_FOOD_COLLISION;
+			m.pacman_food_collision_data.food = food;
 			mngr_->send(m);
 		}
 	}

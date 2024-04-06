@@ -19,17 +19,7 @@ PacManSystem::~PacManSystem() {
 
 void PacManSystem::initSystem() {
 	// create the PacMan entity
-	//
-	ecs::Entity* pacman = mngr_->addEntity();
-	mngr_->setHandler(ecs::hdlr::PACMAN, pacman);
-
-	pmTR_ = mngr_->addComponent<Transform>(pacman);
-	float s = 50.0f;
-	float x = (sdlutils().width() - s) / 2.0f;
-	float y = (sdlutils().height() - s) / 2.0f;
-	pmTR_->init(Vector2D(x, y), Vector2D(), s, s, 0.0f);
-	mngr_->addComponent<ImageWithFrames>(pacman, &sdlutils().images().at("pacman_sprites"),8,8,0,0, 128,128, 0, 0, 1, 4);
-	mngr_->addComponent<Health>(pacman,3);
+	createPacman();
 }
 
 void PacManSystem::update() {
@@ -70,5 +60,19 @@ int PacManSystem::update_lives(int l)
 	ecs::Entity* pacman = mngr_->getHandler(ecs::hdlr::PACMAN);
 	Health* pacmanH =  mngr_->getComponent<Health>(pacman);
 	return pacmanH->update_lives(l);
+}
+
+void PacManSystem::createPacman()
+{
+	ecs::Entity* pacman = mngr_->addEntity();
+	mngr_->setHandler(ecs::hdlr::PACMAN, pacman);
+
+	pmTR_ = mngr_->addComponent<Transform>(pacman);
+	float s = 50.0f;
+	float x = (sdlutils().width() - s) / 2.0f;
+	float y = (sdlutils().height() - s) / 2.0f;
+	pmTR_->init(Vector2D(x, y), Vector2D(), s, s, 0.0f);
+	mngr_->addComponent<ImageWithFrames>(pacman, &sdlutils().images().at("pacman_sprites"), 8, 8, 0, 0, 128, 128, 0, 0, 1, 4);
+	mngr_->addComponent<Health>(pacman, 3);
 }
 

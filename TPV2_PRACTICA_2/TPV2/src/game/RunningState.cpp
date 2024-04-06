@@ -10,6 +10,7 @@
 #include "../systems/RenderSystem.h"
 #include "../systems/CollisionsSystem.h"
 #include "../systems/PacManSystem.h"
+#include "../systems/GhostSystem.h"
 #include <math.h>
 
 #include "Game.h"
@@ -21,6 +22,7 @@ RunningState::RunningState():
 	pacmanSys_ = mngr->addSystem<PacManSystem>();
 	renderSys_ = mngr->addSystem<RenderSystem>();
 	collisionSys_ = mngr->addSystem<CollisionsSystem>();
+	ghostSystem_ = mngr->addSystem<GhostSystem>();
 } 
 
 RunningState::~RunningState() {
@@ -31,10 +33,17 @@ void RunningState::leave() {
 }
 
 void RunningState::update() {
+	Uint32 startTime = sdlutils().currRealTime();
 	auto mngr = Game::instance()->getMngr();
 	pacmanSys_->update();
 	collisionSys_->update();
 	renderSys_->update();
+	mngr->refresh();
+
+	Uint32 frameTime = sdlutils().currRealTime() - startTime;
+
+	if (frameTime < 50){
+		SDL_Delay(50 - frameTime);}
 	
 	/*
 	auto mngr = Game::instance()->getMngr();
@@ -246,7 +255,6 @@ void RunningState::checkCollisions() {/*
 }
 
 void RunningState::onPacManDeath() {
-	auto mngr = Game::instance()->getMngr();
 	sdlutils().soundEffects().at("explosion").play();
 	if (pacmanSys_->update_lives(-1) > 0)
 		Game::instance()->setState(Game::NEWROUND);

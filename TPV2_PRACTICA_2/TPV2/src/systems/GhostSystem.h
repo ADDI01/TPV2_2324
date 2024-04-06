@@ -18,7 +18,12 @@ public:
 	void createGhost();
 	virtual void recieve(const Message& m);
 	void onGhostDie(ecs::Entity* ghostDead);
+	void killAllGhosts();
+	void chooseCornerToSpawn(int& x, int& y, int s);
+	void moveGhosts();
+	void timeGhostGenerator();
 private:
 	int nGhosts;
+	float lastTimeGeneratedGhost_;
 };
 

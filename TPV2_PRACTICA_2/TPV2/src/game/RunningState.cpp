@@ -36,6 +36,7 @@ void RunningState::update() {
 	Uint32 startTime = sdlutils().currRealTime();
 	auto mngr = Game::instance()->getMngr();
 	pacmanSys_->update();
+	ghostSystem_->update();
 	collisionSys_->update();
 	renderSys_->update();
 	mngr->refresh();

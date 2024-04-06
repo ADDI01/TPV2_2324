@@ -3,6 +3,8 @@
 #pragma once
 #include "../ecs/System.h"
 
+#include <vector>
+
 class Transform;
 
 class CollisionsSystem: public ecs::System {
@@ -16,6 +18,7 @@ public:
 	void update() override;
 
 	void checkCollisionsPacmanAndWalls(Transform& pacman);
-
+	void checkCollisionsGhostsAndWalls(std::vector<ecs::Entity*> ghosts);
+	void checkCollisionsPacmanAndGhosts(Transform& pacman, std::vector<ecs::Entity*> ghosts);
 };
 

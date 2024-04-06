@@ -21,6 +21,8 @@ void GhostSystem::initSystem()
 
 void GhostSystem::update()
 {
+	timeGhostGenerator();
+	moveGhosts();
 }
 
 int GhostSystem::update_lives(int l)
@@ -32,11 +34,15 @@ void GhostSystem::createGhost()
 {
 	ecs::Entity* ghost = mngr_->addEntity(ecs::grp::GHOSTS);
 
-	mngr_->addComponent<Transform>(ghost, Vector2D(0, 0), Vector2D(), 50, 50, 0.0f);
-	float s = 50.0f;
-	float x = (sdlutils().width() - s) / 2.0f;
-	float y = (sdlutils().height() - s) / 2.0f;
+	int s = 50.0f;
+	int x;
+	int y;
+	chooseCornerToSpawn(x, y,s);
+
+	mngr_->addComponent<Transform>(ghost, Vector2D(x, y), Vector2D(), s, s, 0.0f);
 	mngr_->addComponent<ImageWithFrames>(ghost, &sdlutils().images().at("pacman_sprites"), 8, 8, 4, 0, 128, 128, 4, 0, 1, 8);
+
+	nGhosts++;
 }
 
 void GhostSystem::recieve(const Message& m)
@@ -51,8 +57,71 @@ void GhostSystem::recieve(const Message& m)
 	}
 }
 
+
+
 void GhostSystem::onGhostDie(ecs::Entity* ghostDead)
 {
 	mngr_->setAlive(ghostDead, false);
 	nGhosts--;
+}
+
+void GhostSystem::killAllGhosts()
+{
+	std::vector<ecs::Entity*> ghosts = mngr_->getEntities(ecs::grp::GHOSTS);
+	nGhosts = 0;
+	for (ecs::Entity* ghost : ghosts)
+		mngr_->setAlive(ghost, false);
+}
+
+void GhostSystem::chooseCornerToSpawn(int& x, int& y, int s)
+{
+	int chooseP = sdlutils().rand().nextInt(0, 4);
+	switch (chooseP)
+	{
+	case 0:
+		x = 0;
+		y = 0;
+		break;
+	case 1:
+		x = sdlutils().width() - s;
+		y = 0;
+		break;
+	case 2:
+		x = 0;
+		y= sdlutils().height() - s;
+		break;
+	case 3:
+		x = sdlutils().width() - s;
+		y = sdlutils().height() - s;
+		break;
+	default:
+		break;
+	}
+}
+
+void GhostSystem::moveGhosts()
+{
+	ecs::Entity* pacman = mngr_->getHandler(ecs::hdlr::PACMAN);
+	std::vector<ecs::Entity*> ghosts = mngr_->getEntities(ecs::grp::GHOSTS);
+
+	for (ecs::Entity* ghost : ghosts) {
+
+		Transform* ghostTR = mngr_->getComponent<Transform>(ghost);
+		if (sdlutils().rand().nextInt(0, 1001) < 5) {
+
+			Transform* pacmanTR = mngr_->getComponent<Transform>(pacman);
+			ghostTR->getVel().set((pacmanTR->getPos() - ghostTR->getPos()).normalize() * 1.1f);
+		}
+
+		ghostTR->setPos(ghostTR->getPos() + ghostTR->getVel());
+	}
+}
+
+void GhostSystem::timeGhostGenerator()
+{
+	if (sdlutils().virtualTimer().currTime() > lastTimeGeneratedGhost_ + 5000) {
+		if(nGhosts < 10)
+			createGhost();
+		lastTimeGeneratedGhost_ = sdlutils().virtualTimer().currTime();
+	}
 }

@@ -8,6 +8,7 @@
 #include "../ecs/Manager.h"
 #include "../sdlutils/InputHandler.h"
 #include "../sdlutils/SDLUtils.h"
+#include "../game/Game.h"
 
 PacManSystem::PacManSystem() :
 		pmTR_(nullptr) {
@@ -60,6 +61,22 @@ int PacManSystem::update_lives(int l)
 	ecs::Entity* pacman = mngr_->getHandler(ecs::hdlr::PACMAN);
 	Health* pacmanH =  mngr_->getComponent<Health>(pacman);
 	return pacmanH->update_lives(l);
+}
+
+void PacManSystem::recieve(const Message& m)
+{
+	switch (m.id)
+	{
+	case _m_PACMAN_GHOST_COLLISION:
+		//sdlutils().soundEffects().at("explosion").play();
+		if (update_lives(-1) > 0)
+			Game::instance()->setState(Game::NEWROUND);
+		else
+			Game::instance()->setState(Game::GAMEOVER);
+
+	default:
+		break;
+	}
 }
 
 void PacManSystem::createPacman()

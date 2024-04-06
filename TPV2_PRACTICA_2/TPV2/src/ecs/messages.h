@@ -28,7 +28,7 @@ struct Message {
 
 		// _m_STAR_EATEN
 		struct {
-			ecs::entity_t e;
+			ecs::Entity* e;
 		} pacman_ghost_collision_data;
 	};
 };

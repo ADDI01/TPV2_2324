@@ -12,8 +12,6 @@ public:
 
 	Inmunity();
 	virtual ~Inmunity();
-	void initComponent() override;
-	void render() override;
 	void setInmunity(bool inm) { isInmune = inm; }
 
 private:

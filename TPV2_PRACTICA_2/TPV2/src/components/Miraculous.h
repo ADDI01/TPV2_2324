@@ -12,8 +12,6 @@ public:
 
 	Miraculous();
 	virtual ~Miraculous();
-	void initComponent() override;
-	void render() override;
 
 	void setMiraculousity(bool mir) { isMiraculous = mir; };
 

@@ -6,6 +6,8 @@
 #include "../sdlutils/InputHandler.h"
 #include "../sdlutils/macros.h"
 #include "../sdlutils/SDLUtils.h"
+#include "../ecs/messages.h"
+#include "../ecs/Manager.h"
 #include "Game.h"
 NewRoundState::NewRoundState() :
 		msg_(sdlutils().msgs().at("newround")), //
@@ -19,6 +21,9 @@ NewRoundState::~NewRoundState() {
 }
 
 void NewRoundState::leave() {
+	Message m;
+	m.id = _m_ROUND_START;
+	Game::instance()->getMngr()->send(m, true);
 }
 
 void NewRoundState::update() {

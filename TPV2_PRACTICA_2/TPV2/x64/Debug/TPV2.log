@@ -10,6 +10,6 @@ C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\s
           [
               T=Texture
           ]
-C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\PacManSystem.cpp(111,38): message : vea la primera referencia a “SDLUtils::map_access_wrapper<Texture>::at” en “PacManSystem::createPacman”
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\PacManSystem.cpp(116,38): message : vea la primera referencia a “SDLUtils::map_access_wrapper<Texture>::at” en “PacManSystem::createPacman”
 C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(199,30): message : Vea la referencia a la creación de una instancia de clase plantilla "SDLUtils::map_access_wrapper<Texture>" que se está compilando
   TPV2.vcxproj -> C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\bin\TPV2Debug.exe

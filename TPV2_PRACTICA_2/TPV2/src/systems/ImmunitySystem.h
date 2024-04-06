@@ -17,7 +17,6 @@ public:
 	virtual void recieve(const Message& m);
 
 private:
-	float startInmunityTime;
-	float lastTimeGeneratedGhost_;
+	Uint32 startInmunityTime;
 };
 

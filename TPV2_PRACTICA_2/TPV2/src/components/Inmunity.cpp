@@ -8,10 +8,3 @@ Inmunity::~Inmunity()
 {
 }
 
-void Inmunity::initComponent()
-{
-}
-
-void Inmunity::render()
-{
-}

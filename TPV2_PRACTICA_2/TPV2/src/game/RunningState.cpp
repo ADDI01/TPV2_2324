@@ -42,6 +42,7 @@ void RunningState::update() {
 	ghostSystem_->update();
 	collisionSys_->update();
 	renderSys_->update();
+	foodSys_->update();
 	mngr->refresh();
 
 	Uint32 frameTime = sdlutils().currRealTime() - startTime;

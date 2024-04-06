@@ -21,6 +21,9 @@ public:
 	void initComponent() override;
 	void render() override;
 
+	void setNewFrame(int sCol, int sRow, int nCol, int nRow) { scol_ = sCol; srow_ = sRow; ncol_ = nCol;  
+		nrow_ = nRow; }
+	
 private:
 	Texture *tex_;
 	Transform *tr_;

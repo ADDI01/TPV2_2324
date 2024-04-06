@@ -8,7 +8,7 @@ class ImmunitySystem : public ecs::System
 {
 public:
 
-	__SYSID_DECL__(ecs::sys::GHOSTSYSTEM)
+	__SYSID_DECL__(ecs::sys::INMUNITYSYSTEM)
 
 		ImmunitySystem();
 	virtual ~ImmunitySystem();

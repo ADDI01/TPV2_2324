@@ -70,7 +70,7 @@ void PacManSystem::recieve(const Message& m)
 	{
 	case _m_PACMAN_GHOST_COLLISION:
 		//sdlutils().soundEffects().at("explosion").play();
-		if (mngr_->getComponent<Health>(mngr_->getHandler(ecs::hdlr::PACMAN))) {
+		if (mngr_->getComponent<Inmunity>(mngr_->getHandler(ecs::hdlr::PACMAN))) {
 			if (update_lives(-1) > 0) {
 				Message m2;
 					m2.id = _m_ROUND_OVER;

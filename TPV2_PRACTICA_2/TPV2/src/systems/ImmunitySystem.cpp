@@ -26,6 +26,7 @@ void ImmunitySystem::update()
 		if (currInmunityTime >= 5000) {
 			Message m;
 			m.id = _m_IMMUNITY_END;
+			mngr_->send(m);
 		}
 	}
 }

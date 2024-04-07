@@ -11,6 +11,7 @@ public:
 	void initSystem() override;
 	void update() override;
 	virtual void recieve(const Message& m);
+	void resetTimers();
 private:
 	void generateGrid();
 	void createFood(float x, float y, int s);

@@ -22,8 +22,10 @@ public:
 	void chooseCornerToSpawn(int& x, int& y, int s);
 	void moveGhosts();
 	void timeGhostGenerator();
+	void changeGhostsLook(int scol, int srow, int ncol, int nrow);
 private:
 	int nGhosts;
 	float lastTimeGeneratedGhost_;
+	bool canSpawnGhost;
 };
 

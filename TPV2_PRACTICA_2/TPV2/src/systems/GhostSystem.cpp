@@ -16,6 +16,7 @@ GhostSystem::~GhostSystem()
 
 void GhostSystem::initSystem()
 {
+	canSpawnGhost = true;
 }
 
 void GhostSystem::update()
@@ -60,6 +61,14 @@ void GhostSystem::recieve(const Message& m)
 		break;
 	case  _m_GAME_OVER:
 		killAllGhosts();
+		break;
+	case  _m_IMMUNITY_START:
+		changeGhostsLook(0,6,8,1);
+		canSpawnGhost = false;
+		break;
+	case _m_IMMUNITY_END:
+		changeGhostsLook(0, 4, 8, 1);
+		canSpawnGhost = true;
 		break;
 	default:
 		break;
@@ -129,8 +138,16 @@ void GhostSystem::moveGhosts()
 void GhostSystem::timeGhostGenerator()
 {
 	if (sdlutils().virtualTimer().currTime() > lastTimeGeneratedGhost_ + 5000) {
-		if(nGhosts < 10)
+		if(canSpawnGhost && nGhosts < 10)
 			createGhost();
 		lastTimeGeneratedGhost_ = sdlutils().virtualTimer().currTime();
+	}
+}
+
+void GhostSystem::changeGhostsLook(int scol, int srow, int ncol,int nrow)
+{
+	std::vector<ecs::Entity*> ghosts = mngr_->getEntities(ecs::grp::GHOSTS);
+	for (ecs::Entity* ghost : ghosts) {
+		mngr_->getComponent<ImageWithFrames>(ghost)->setNewFrame(scol,srow,ncol,nrow);
 	}
 }

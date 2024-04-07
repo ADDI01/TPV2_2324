@@ -2,8 +2,9 @@
 #include "../sdlutils/SDLUtils.h"
 
 
-Miraculous::Miraculous(Uint32 time) : timeOfCreation(time), isMiraculous(false),
-	miraculousCD(sdlutils().rand().nextInt(10, 21)), miraculousRemaining(0), startOfMiraculousTime(0)
+Miraculous::Miraculous(Uint32 time, bool startMiraculous) : timeOfCreation(time), isMiraculous_(startMiraculous),
+	miraculousCD(sdlutils().rand().nextInt(10000, 21000)), miraculousRemaining(sdlutils().rand().nextInt(1000, 6000)),
+	startOfMiraculousTime(sdlutils().currRealTime())
 {
 }
 
@@ -26,7 +27,7 @@ void Miraculous::setMiraculousTimer(float mirRm)
 	miraculousRemaining = mirRm;
 }
 
-void Miraculous::setStartOfMiraculousTime(float startMrTm)
+void Miraculous::setStartOfMiraculousTime(Uint32  startMrTm)
 {
 	startOfMiraculousTime = startMrTm;
 }

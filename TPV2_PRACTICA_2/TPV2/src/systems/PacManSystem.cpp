@@ -73,29 +73,22 @@ void PacManSystem::recieve(const Message& m)
 	switch (m.id)
 	{
 	case _m_PACMAN_GHOST_COLLISION:
-		//sdlutils().soundEffects().at("explosion").play();
-		if (!mngr_->getComponent<Inmunity>(mngr_->getHandler(ecs::hdlr::PACMAN))->getInmunnity()) {
-			if (update_lives(-1) > 0) {
-				Message m2;
-					m2.id = _m_ROUND_OVER;
-					mngr_->send(m2);
-			}
-			else {
-				Message m2;
-					m2.id = _m_GAME_OVER;
-					m2.game_over_data.win = false;
-					mngr_->send(m2);
-			}
-		}
+		onPacmanHitWithGhost();
 		break;
 	case _m_ROUND_OVER:
+		sdlutils().soundEffects().at("death").play();
 		Game::instance()->setState(Game::NEWROUND);
 		break;
 	case _m_GAME_OVER:
-		if(m.game_over_data.win)
+
+		if (m.game_over_data.win) {
+			sdlutils().soundEffects().at("won").play();
 			Game::instance()->setState(Game::WIN);
-		else
+		}
+		else {
+			sdlutils().soundEffects().at("death").play();
 			Game::instance()->setState(Game::GAMEOVER);
+		}
 		break;
 	case _m_ROUND_START:
 		pmTR_->setPos(Vector2D((sdlutils().width() - pmTR_->getWidth()) / 2.0f, (sdlutils().height() - pmTR_->getHeight()) / 2.0f));
@@ -118,6 +111,23 @@ void PacManSystem::recieve(const Message& m)
 void PacManSystem::killPacman()
 {
 	mngr_->setAlive(mngr_->getHandler(ecs::hdlr::PACMAN),false);
+}
+
+void PacManSystem::onPacmanHitWithGhost()
+{
+	if (!mngr_->getComponent<Inmunity>(mngr_->getHandler(ecs::hdlr::PACMAN))->getInmunnity()) {
+		if (update_lives(-1) > 0) {
+			Message m2;
+			m2.id = _m_ROUND_OVER;
+			mngr_->send(m2);
+		}
+		else {
+			Message m2;
+			m2.id = _m_GAME_OVER;
+			m2.game_over_data.win = false;
+			mngr_->send(m2);
+		}
+	}
 }
 
 void PacManSystem::createPacman()

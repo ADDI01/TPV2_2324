@@ -4,6 +4,7 @@
 #include "../components/Transform.h"
 #include "../components/Miraculous.h"
 #include "../components/ImageWithFrames.h"
+#include "../components/Inmunity.h"
 
 FoodSystem::FoodSystem()
 {
@@ -118,8 +119,9 @@ void FoodSystem::eatAllFoods()
 
 void FoodSystem::eatFood(ecs::Entity* food)
 {
+	sdlutils().soundEffects().at("eat").play();
 	Miraculous* foodMir = mngr_->getComponent<Miraculous>(food);
-	if (foodMir->getIsMiraculous()) {
+	if (!mngr_->getComponent<Inmunity>(mngr_->getHandler(ecs::hdlr::PACMAN))->getInmunnity() && foodMir->getIsMiraculous()) {
 		Message m;
 		m.id = _m_IMMUNITY_START;
 		mngr_->send(m);

@@ -18,6 +18,7 @@ public:
 	int update_lives(int l);
 	virtual void recieve(const Message& m);
 	void killPacman();
+	void onPacmanHitWithGhost();
 private:
 	void createPacman();
 	Transform *pmTR_;

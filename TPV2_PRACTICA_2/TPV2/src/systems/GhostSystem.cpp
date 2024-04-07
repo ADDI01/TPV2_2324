@@ -79,6 +79,7 @@ void GhostSystem::recieve(const Message& m)
 
 void GhostSystem::onGhostDie(ecs::Entity* ghostDead)
 {
+	sdlutils().soundEffects().at("chomp").play();
 	mngr_->setAlive(ghostDead, false);
 	nGhosts--;
 }

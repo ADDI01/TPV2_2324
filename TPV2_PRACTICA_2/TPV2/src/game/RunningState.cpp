@@ -118,6 +118,7 @@ void RunningState::update() {
 
 void RunningState::enter() {
 	Game::instance()->getMngr()->flushMessages();
+	sdlutils().soundEffects().at("intro");
 }
 
 void RunningState::checkCollisions() {/*

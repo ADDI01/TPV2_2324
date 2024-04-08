@@ -48,72 +48,17 @@ void RunningState::update() {
 	foodSys_->update();
 	mngr->refresh();
 
-	Uint32 frameTime = sdlutils().currRealTime() - startTime;
-
-	if (frameTime < 50){
-		SDL_Delay(50 - frameTime);}
-	
-	/*
-	auto mngr = Game::instance()->getMngr();
-
-	// check if fighter won
-	if (mngr->getEntities(ecs::grp::ASTEROIDS).size() == 0) {
-		Game::instance()->setState(Game::GAMEOVER);
-		return;
-	}
-
 	// move to pause if P pressed
 	if (ihdlr.keyDownEvent() && ihdlr.isKeyDown(SDL_SCANCODE_P)) {
 		Game::instance()->setState(Game::PAUSED);
 		return;
 	}
 
-	auto fighter = mngr->getHandler(ecs::hdlr::FIGHTER);
-	auto &asteroids = mngr->getEntities(ecs::grp::ASTEROIDS);
-	auto &blackHoles = mngr->getEntities(ecs::grp::BLACKHOLES);
-	auto &missiles = mngr->getEntities(ecs::grp::MISSILES);
-	// update
-	mngr->update(fighter);
-	for (auto a : asteroids) {
-		mngr->update(a);
-	}
-	for (auto b : blackHoles) {
-		mngr->update(b);
-	}
-	for (auto m : missiles) {
-		mngr->update(m);
-	}
-	// check collisions
-	checkCollisions();
+	Uint32 frameTime = sdlutils().currRealTime() - startTime;
 
-	// render
-	sdlutils().clearRenderer();
-	for (auto a : blackHoles) {
-		mngr->render(a);
+	if (frameTime < 50){
+		SDL_Delay(50 - frameTime);
 	}
-	for (auto a : asteroids) {
-		mngr->render(a);
-	}
-	for (auto m : missiles) {
-		mngr->render(m);
-	}
-	mngr->render(fighter);
-	sdlutils().presentRenderer();
-
-	mngr->refresh();
-
-	if (sdlutils().virtualTimer().currTime() > lastTimeGeneratedAsteroids_ + 5000) {
-		ast_mngr_->create_asteroids(1);
-		lastTimeGeneratedAsteroids_ = sdlutils().virtualTimer().currTime();
-	}
-
-	if (sdlutils().virtualTimer().currTime() > lastTimeGeneratedMissiles_ + 1500) {
-		missiles_mngr_->create_missiles(1);
-		lastTimeGeneratedMissiles_ = sdlutils().virtualTimer().currTime();
-	}
-	*/
-
-	
 }
 
 void RunningState::enter() {

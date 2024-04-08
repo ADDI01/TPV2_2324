@@ -1,1 +1,19 @@
-﻿
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: El directorio Output no termina con una barra diagonal final. Esta instancia de compilación agregará la barra diagonal porque es necesaria para que se pueda evaluar correctamente el directorio Output.
+  RunningState.cpp
+C:\Users\David\Desktop\Portal\GRADO DESARROLLO DE VIDEOJUEGOS\CURSOS\2ºCURSO\ASIGNATURAS\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\PacManSystem.h(7,17): warning C4099: 'Transform': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\David\Desktop\Portal\GRADO DESARROLLO DE VIDEOJUEGOS\CURSOS\2ºCURSO\ASIGNATURAS\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.h(8,7): message : vea la declaración de 'Transform'
+C:\Users\David\Desktop\Portal\GRADO DESARROLLO DE VIDEOJUEGOS\CURSOS\2ºCURSO\ASIGNATURAS\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\RenderSystem.h(7,17): warning C4099: 'Transform': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\David\Desktop\Portal\GRADO DESARROLLO DE VIDEOJUEGOS\CURSOS\2ºCURSO\ASIGNATURAS\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\PacManSystem.h(7,8): message : vea la declaración de 'Transform'
+C:\Users\David\Desktop\Portal\GRADO DESARROLLO DE VIDEOJUEGOS\CURSOS\2ºCURSO\ASIGNATURAS\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\GhostSystem.h(5,17): warning C4099: 'Transform': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\David\Desktop\Portal\GRADO DESARROLLO DE VIDEOJUEGOS\CURSOS\2ºCURSO\ASIGNATURAS\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\CollisionsSystem.h(8,7): message : vea la declaración de 'Transform'
+C:\Users\David\Desktop\Portal\GRADO DESARROLLO DE VIDEOJUEGOS\CURSOS\2ºCURSO\ASIGNATURAS\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\ImmunitySystem.h(5,17): warning C4099: 'Transform': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\David\Desktop\Portal\GRADO DESARROLLO DE VIDEOJUEGOS\CURSOS\2ºCURSO\ASIGNATURAS\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\GhostSystem.h(5,8): message : vea la declaración de 'Transform'
+C:\Users\David\Desktop\Portal\GRADO DESARROLLO DE VIDEOJUEGOS\CURSOS\2ºCURSO\ASIGNATURAS\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(51,32): warning C4101: 'e': variable local sin referencia
+C:\Users\David\Desktop\Portal\GRADO DESARROLLO DE VIDEOJUEGOS\CURSOS\2ºCURSO\ASIGNATURAS\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(48,13): message : al compilar la función del miembro clase plantilla "T &SDLUtils::map_access_wrapper<T>::at(const std::string &)"
+          with
+          [
+              T=SoundEffect
+          ]
+C:\Users\David\Desktop\Portal\GRADO DESARROLLO DE VIDEOJUEGOS\CURSOS\2ºCURSO\ASIGNATURAS\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\RunningState.cpp(66,30): message : vea la primera referencia a “SDLUtils::map_access_wrapper<SoundEffect>::at” en “RunningState::enter”
+C:\Users\David\Desktop\Portal\GRADO DESARROLLO DE VIDEOJUEGOS\CURSOS\2ºCURSO\ASIGNATURAS\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(201,34): message : Vea la referencia a la creación de una instancia de clase plantilla "SDLUtils::map_access_wrapper<SoundEffect>" que se está compilando
+  TPV2.vcxproj -> C:\Users\David\Desktop\Portal\GRADO DESARROLLO DE VIDEOJUEGOS\CURSOS\2ºCURSO\ASIGNATURAS\TPV2_2324\TPV2_PRACTICA_2\bin\TPV2Debug.exe

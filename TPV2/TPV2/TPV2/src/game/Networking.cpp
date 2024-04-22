@@ -1,4 +1,3 @@
-/*
 // This file is part of the course TPV2@UCM - Samir Genaim
 
 #include "Networking.h"
@@ -8,7 +7,6 @@
 #include "Bullets.h"
 #include "Fighter.h"
 #include "Game.h"
-#include "netwrok_messages.h"
 #include "../sdlutils/SDLNetUtils.h"
 
 Networking::Networking() :
@@ -236,4 +234,3 @@ void Networking::handle_restart() {
 	Game::instance()->get_fighters().bringAllToLife();
 
 }
-*/

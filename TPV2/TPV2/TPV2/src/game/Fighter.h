@@ -4,7 +4,6 @@
  * The content of this class is based on https://glouw.com/2018/03/11/littlewolf.html
  */
 
-/*
 #pragma once
 
 #include <SDL.h>
@@ -16,7 +15,6 @@
 #include <fstream>
 
 #include "BulletsManager.h"
-#include "../sdlutils/InputHandler.h"
 #include "../utils/Vector2D.h"
 
 class Texture;
@@ -108,4 +106,3 @@ private:
 
 };
 
-*/

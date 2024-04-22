@@ -2,19 +2,45 @@
 
 #pragma once
 
+#include <SDL_stdinc.h>
+#include <vector>
+
 #include "../utils/Singleton.h"
 
-class LittleWolf;
+class Fighter;
+class Bullets;
+class Networking;
 
-class Game : public Singleton<Game> {
-public:
-	friend Singleton<Game>;
+class Game: public Singleton<Game> {
+	friend Singleton<Game> ;
 	Game();
+public:
 	virtual ~Game();
-	void init();
+	bool init(char *host, Uint16 port);
 	void start();
+
+	Fighter& get_fighters() {
+		return *fighters_;
+	}
+
+	Bullets& get_bullets() {
+		return *bm_;
+	}
+
+	Networking& get_networking() {
+		return *net_;
+	}
+
+
+
 private:
-	LittleWolf *little_wolf_;
+
+	void check_collisions();
+
+
+	Bullets *bm_;
+	Fighter *fighters_;
+	Networking *net_;
 
 };
 

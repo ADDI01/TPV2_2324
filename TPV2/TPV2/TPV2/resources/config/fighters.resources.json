@@ -8,6 +8,7 @@
   
   "images" : [
     { "id" : "airplanes", "file" : "resources/images/airplanes.png" },
+    { "id" : "fighter", "file" : "resources/images/fighter.png" },
     { "id" : "fire", "file" : "resources/images/fire.png" }
   ],
   

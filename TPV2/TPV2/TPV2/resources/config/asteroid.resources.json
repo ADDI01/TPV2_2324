@@ -1,7 +1,7 @@
 {
 
   "fonts" : [
-    { "id" : "ARIAL16", "file" : "resources/fonts/ARIAL.ttf", "size": 16 },
+    { "id" : "ARIAL16", "file" : "kresources/fonts/ARIAL.ttf", "size": 16 },
     { "id" : "ARIAL24", "file" : "resources/fonts/ARIAL.ttf", "size": 24 },
     { "id" : "ARIAL48", "file" : "resources/fonts/ARIAL.ttf", "size": 48 }
   ],

@@ -2,72 +2,45 @@
 
 #pragma once
 
+#include <SDL_stdinc.h>
 #include <vector>
+
 #include "../utils/Singleton.h"
-#include "GameState.h"
 
-namespace ecs {
-class Manager;
-}
-
-class InputHandler;
-class AsteroidsFacade;
-class FighterFacade;
-class BlackHolesFacade;
-class MissilesFacade;
+class Fighter;
+class Bullets;
+class Networking;
 
 class Game: public Singleton<Game> {
 	friend Singleton<Game> ;
 	Game();
 public:
-	enum State {
-		RUNNING, PAUSED, NEWGAME, NEWROUND, GAMEOVER
-	};
 	virtual ~Game();
-	void init();
+	bool init(char *host, Uint16 port);
 	void start();
-	inline ecs::Manager* getMngr() {
-		return mngr_;
+
+	Fighter& get_fighters() {
+		return *fighters_;
 	}
-	inline void setState(State s) {
-		GameState *new_state = nullptr;
-		switch (s) {
-		case RUNNING:
-			new_state = runing_state_;
-			break;
-		case PAUSED:
-			new_state = paused_state_;
-			break;
-		case NEWGAME:
-			new_state = newgame_state_;
-			break;
-		case NEWROUND:
-			new_state = newround_state_;
-			break;
-		case GAMEOVER:
-			new_state = gameover_state_;
-			break;
-		default:
-			break;
-		}
-		current_state_->leave();
-		current_state_ = new_state;
-		current_state_->enter();
+
+	Bullets& get_bullets() {
+		return *bm_;
 	}
+
+	Networking& get_networking() {
+		return *net_;
+	}
+
+
+
 private:
-	ecs::Manager *mngr_;
-	InputHandler &ihdlr;
 
-	GameState *current_state_;
-	GameState *paused_state_;
-	GameState *runing_state_;
-	GameState *newgame_state_;
-	GameState *newround_state_;
-	GameState *gameover_state_;
+	void check_collisions();
 
-	AsteroidsFacade* ast_facede;
-	FighterFacade* fighter_facede;
-	BlackHolesFacade* blackHoles_facede;
-	MissilesFacade* missiles_facede;
+
+	Bullets *bm_;
+	Fighter *fighters_;
+	Networking *net_;
+
 };
 

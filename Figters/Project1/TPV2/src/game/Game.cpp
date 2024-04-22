@@ -2,78 +2,49 @@
 
 #include "Game.h"
 
-#include "../components/DeAcceleration.h"
-#include "../components/FighterCtrl.h"
-#include "../components/Image.h"
-#include "../components/ShowAtOpossiteSide.h"
-#include "../components/Transform.h"
-#include "../ecs/Manager.h"
+#include "Bullets.h"
+#include "Fighter.h"
+#include "Networking.h"
 #include "../sdlutils/InputHandler.h"
-#include "../sdlutils/SDLUtils.h"
-#include "../utils/Vector2D.h"
+#include "SDLNetUtils.h"
+#include "../utils/SDLUtils.h"
 #include "../utils/Collisions.h"
-#include "AsteroidsUtils.h"
-#include "FighterUtils.h"
-#include "GameOverState.h"
-#include "NewGameState.h"
-#include "NewRoundState.h"
-#include "BlackHolesUtils.h"
-#include "MissilesUtils.h"
-
-#include "PausedState.h"
-#include "RunningState.h"
-
-using ecs::Manager;
 
 Game::Game() :
-		mngr_(new Manager()), //
-		ihdlr(ih()), //
-		current_state_(nullptr), //
-		paused_state_(nullptr), //
-		runing_state_(nullptr), //
-		newgame_state_(nullptr), //
-		newround_state_(nullptr), //
-		gameover_state_(nullptr) {
-
+		bm_(nullptr), //
+		fighters_(nullptr), //
+		net_(nullptr) {
 }
 
 Game::~Game() {
-	delete mngr_;
-	delete ast_facede;
-	delete blackHoles_facede;
-	delete missiles_facede;
-	delete paused_state_;
-	delete runing_state_;
-	delete newgame_state_;
-	delete newround_state_;
-	delete gameover_state_;
+	delete fighters_;
+	delete bm_;
 }
 
-void Game::init() {
+bool Game::init(char *host, Uint16 port) {
 
-	// initialise the SDLUtils singleton
-	SDLUtils::init("ASTEROIDS", 800, 600,
-			"resources/config/asteroids.resources.json");
+	net_ = new Networking();
 
-	ast_facede = new AsteroidsUtils();
-	fighter_facede = new FighterUtils();
-	blackHoles_facede = new BlackHolesUtils();
-	missiles_facede = new MissilesUtils();
+	if (!net_->init(host, port)) {
+		SDLNetUtils::print_SDLNet_error();
+	}
+	std::cout << "Connected as client " << (int) net_->client_id() << std::endl;
 
-	fighter_facede->create_fighter();
+	// initialize the SDLUtils singleton
+	SDLUtils::init("SDLNet Game", 900, 480,
+			"resources/config/asteroid.resources.json");
 
-	paused_state_ = new PausedState();
-	runing_state_ = new RunningState(ast_facede, fighter_facede, blackHoles_facede, missiles_facede);
-	newgame_state_ = new NewGameState(fighter_facede);
-	newround_state_ = new NewRoundState(ast_facede, fighter_facede,blackHoles_facede,missiles_facede);
-	gameover_state_ = new GameOverState();
+	bm_ = new Bullets();
+	fighters_ = new Fighter();
 
-	current_state_ = newgame_state_;
+	// add some players
+	fighters_->addPlayer(net_->client_id());
+
+	return true;
 }
 
 void Game::start() {
-
-// a boolean to exit the loop
+	// a boolean to exit the loop
 	bool exit = false;
 
 	auto &ihdlr = ih();
@@ -83,13 +54,33 @@ void Game::start() {
 
 		// refresh the input handler
 		ihdlr.refresh();
+		if (ihdlr.keyDownEvent()) {
 
-		if (ihdlr.isKeyDown(SDL_SCANCODE_ESCAPE)) {
-			exit = true;
-			continue;
+			// ESC exists the game
+			if (ihdlr.isKeyDown(SDL_SCANCODE_ESCAPE)) {
+				exit = true;
+				continue;
+			}
+
+			// ESC exists the game
+			if (ihdlr.isKeyDown(SDL_SCANCODE_R)) {
+				net_->send_restart();
+			}
+
 		}
 
-		current_state_->update();
+		fighters_->update();
+		bm_->update();
+		net_->update();
+
+		check_collisions();
+
+		sdlutils().clearRenderer();
+
+		fighters_->render();
+		bm_->render();
+
+		sdlutils().presentRenderer();
 
 		Uint32 frameTime = sdlutils().currRealTime() - startTime;
 
@@ -97,4 +88,26 @@ void Game::start() {
 			SDL_Delay(10 - frameTime);
 	}
 
+	net_->disconnect();
+
+}
+
+void Game::check_collisions() {
+	if (!net_->is_master())
+		return;
+
+	for (Bullets::Bullet &b : *bm_) {
+		if (b.used) {
+			for (Fighter::Player &p : *fighters_) {
+				if (p.state == Fighter::ALIVE) {
+					if (Collisions::collidesWithRotation(p.pos, p.width,
+							p.height, p.rot, b.pos, b.width, b.height, b.rot)) {
+
+						net_->send_dead(p.id);
+						continue;
+					}
+				}
+			}
+		}
+	}
 }

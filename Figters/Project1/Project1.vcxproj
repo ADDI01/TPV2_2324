@@ -18,6 +18,145 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TPV2\src\game\Bullets.cpp" />
+    <ClCompile Include="TPV2\src\game\Fighter.cpp" />
+    <ClCompile Include="TPV2\src\game\Game.cpp" />
+    <ClCompile Include="TPV2\src\game\Networking.cpp" />
+    <ClCompile Include="TPV2\src\game\SDLNetUtils.cpp" />
+    <ClCompile Include="TPV2\src\game\UDPServer.cpp" />
+    <ClCompile Include="TPV2\src\json\JSON.cpp" />
+    <ClCompile Include="TPV2\src\json\JSONValue.cpp" />
+    <ClCompile Include="TPV2\src\json\json_demo.cpp" />
+    <ClCompile Include="TPV2\src\main.cpp" />
+    <ClCompile Include="TPV2\src\sdlutils\SoundEffect.cpp" />
+    <ClCompile Include="TPV2\src\sdlutils\Texture.cpp" />
+    <ClCompile Include="TPV2\src\utils\Collisions.cpp" />
+    <ClCompile Include="TPV2\src\utils\SDLUtils.cpp" />
+    <ClCompile Include="TPV2\src\utils\Vector2D.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SDL2-2.0.7\include\begin_code.h" />
+    <ClInclude Include="SDL2-2.0.7\include\close_code.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_assert.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_atomic.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_audio.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_bits.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_blendmode.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_clipboard.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_config.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_config_android.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_config_iphoneos.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_config_macosx.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_config_minimal.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_config_pandora.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_config_psp.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_config_windows.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_config_winrt.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_config_wiz.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_copying.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_cpuinfo.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_egl.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_endian.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_error.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_events.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_filesystem.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_gamecontroller.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_gesture.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_haptic.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_hints.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_joystick.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_keyboard.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_keycode.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_loadso.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_log.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_main.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_messagebox.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_mouse.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_mutex.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_name.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_opengl.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_opengles.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_opengles2.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_opengles2_gl2.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_opengles2_gl2ext.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_opengles2_gl2platform.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_opengles2_khrplatform.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_opengl_glext.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_pixels.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_platform.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_power.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_quit.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_rect.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_render.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_revision.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_rwops.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_scancode.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_shape.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_stdinc.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_surface.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_system.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_syswm.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_test.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_test_assert.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_test_common.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_test_compare.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_test_crc32.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_test_font.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_test_fuzzer.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_test_harness.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_test_images.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_test_log.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_test_md5.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_test_memory.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_test_random.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_thread.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_timer.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_touch.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_types.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_version.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_video.h" />
+    <ClInclude Include="SDL2-2.0.7\include\SDL_vulkan.h" />
+    <ClInclude Include="SDL2_image-2.0.1\include\SDL_image.h" />
+    <ClInclude Include="SDL2_mixer-2.0.2\include\SDL_mixer.h" />
+    <ClInclude Include="SDL2_net-2.0.1\include\SDL_net.h" />
+    <ClInclude Include="SDL2_ttf-2.0.14\include\SDL_ttf.h" />
+    <ClInclude Include="TPV2\src\game\Bullets.h" />
+    <ClInclude Include="TPV2\src\game\BulletsManager.h" />
+    <ClInclude Include="TPV2\src\game\ecs_defs.h" />
+    <ClInclude Include="TPV2\src\game\Fighter.h" />
+    <ClInclude Include="TPV2\src\game\Game.h" />
+    <ClInclude Include="TPV2\src\game\Networking.h" />
+    <ClInclude Include="TPV2\src\game\netwrok_messages.h" />
+    <ClInclude Include="TPV2\src\game\SDLNetUtils.h" />
+    <ClInclude Include="TPV2\src\game\UDPServer.h" />
+    <ClInclude Include="TPV2\src\json\JSON.h" />
+    <ClInclude Include="TPV2\src\json\JSONValue.h" />
+    <ClInclude Include="TPV2\src\json\json_demo.h" />
+    <ClInclude Include="TPV2\src\sdlutils\Font.h" />
+    <ClInclude Include="TPV2\src\sdlutils\InputHandler.h" />
+    <ClInclude Include="TPV2\src\sdlutils\macros.h" />
+    <ClInclude Include="TPV2\src\sdlutils\Music.h" />
+    <ClInclude Include="TPV2\src\sdlutils\RandomNumberGenerator.h" />
+    <ClInclude Include="TPV2\src\sdlutils\SoundEffect.h" />
+    <ClInclude Include="TPV2\src\sdlutils\Texture.h" />
+    <ClInclude Include="TPV2\src\sdlutils\VirtualTimer.h" />
+    <ClInclude Include="TPV2\src\utils\checkML.h" />
+    <ClInclude Include="TPV2\src\utils\Collisions.h" />
+    <ClInclude Include="TPV2\src\utils\DynamicBitSet.h" />
+    <ClInclude Include="TPV2\src\utils\mpl.h" />
+    <ClInclude Include="TPV2\src\utils\ptr_iterator.h" />
+    <ClInclude Include="TPV2\src\utils\SDLUtils.h" />
+    <ClInclude Include="TPV2\src\utils\Singleton.h" />
+    <ClInclude Include="TPV2\src\utils\Vector2D.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SDL2-2.0.7\include\SDL_config.h.cmake" />
+    <None Include="SDL2-2.0.7\include\SDL_config.h.in" />
+    <None Include="SDL2-2.0.7\include\SDL_config_macosx.h.orig" />
+    <None Include="TPV2\src\sdlutils\RAEDME.md" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -71,7 +210,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LibraryPath>.\SDL2_image-2.0.1\lib\x64;.\SDL2_net-2.0.1\lib\x64;.\SDL2_mixer-2.0.2\lib\x64;.\SDL2_ttf-2.0.14\lib\x64;.\SDL2-2.0.7\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>SDL2_image-2.0.1\include;SDL2_mixer-2.0.2\include;SDL2_net-2.0.1\include;SDL2_ttf-2.0.14\include;SDL2-2.0.7\include;$(IncludePath)</IncludePath>
+    <LibraryPath>SDL2_image-2.0.1\lib\x64;SDL2_mixer-2.0.2\lib\x64;SDL2_net-2.0.1\lib\x64;SDL2_ttf-2.0.14\lib\x64;SDL2-2.0.7\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -107,6 +247,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -129,23 +270,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="game\Bullets.h" />
-    <ClInclude Include="game\BulletsManager.h" />
-    <ClInclude Include="game\Fighter.h" />
-    <ClInclude Include="game\Game.h" />
-    <ClInclude Include="game\Networking.h" />
-    <ClInclude Include="game\netwrok_messages.h" />
-    <ClInclude Include="game\UDPServer.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="game\Bullets.cpp" />
-    <ClCompile Include="game\Fighter.cpp" />
-    <ClCompile Include="game\Game.cpp" />
-    <ClCompile Include="game\Networking.cpp" />
-    <ClCompile Include="game\UDPServer.cpp" />
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

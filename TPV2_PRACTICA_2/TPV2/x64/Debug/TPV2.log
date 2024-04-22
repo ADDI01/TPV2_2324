@@ -1,19 +1,209 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: El directorio Output no termina con una barra diagonal final. Esta instancia de compilación agregará la barra diagonal porque es necesaria para que se pueda evaluar correctamente el directorio Output.
+  Miraculous.cpp
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Miraculous.cpp(6,14): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Miraculous.cpp(6,76): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+  Inmunity.cpp
+  Health.cpp
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(51,32): warning C4101: 'e': variable local sin referencia
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(48,13): message : al compilar la función del miembro clase plantilla "T &SDLUtils::map_access_wrapper<T>::at(const std::string &)"
+          with
+          [
+              T=Texture
+          ]
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Health.cpp(15,18): message : vea la primera referencia a “SDLUtils::map_access_wrapper<Texture>::at” en “Health::Health”
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(199,30): message : Vea la referencia a la creación de una instancia de clase plantilla "SDLUtils::map_access_wrapper<Texture>" que se está compilando
+  Image.cpp
+  ImageWithFrames.cpp
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\ImageWithFrames.cpp(52,4): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\ImageWithFrames.cpp(51,72): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\ImageWithFrames.cpp(51,66): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\ImageWithFrames.cpp(51,43): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+  Transform.cpp
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.cpp(33,14): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.cpp(32,71): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.cpp(32,56): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.cpp(32,41): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.cpp(35,14): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.cpp(34,71): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.cpp(34,56): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.cpp(34,41): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.cpp(37,14): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.cpp(36,71): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.cpp(36,56): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.cpp(36,41): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.cpp(39,14): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.cpp(38,71): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.cpp(38,56): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.cpp(38,41): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.cpp(52,64): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.cpp(52,48): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.cpp(52,34): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.cpp(52,31): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+  Manager.cpp
+  Game.cpp
+  GameOverState.cpp
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\GameOverState.cpp(12,10): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\GameOverState.cpp(13,10): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\GameOverState.cpp(14,57): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\GameOverState.cpp(14,41): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(51,32): warning C4101: 'e': variable local sin referencia
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(48,13): message : al compilar la función del miembro clase plantilla "T &SDLUtils::map_access_wrapper<T>::at(const std::string &)"
+          with
+          [
+              T=Texture
+          ]
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\GameOverState.cpp(11,7): message : vea la primera referencia a “SDLUtils::map_access_wrapper<Texture>::at” en “GameOverState::GameOverState”
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(199,30): message : Vea la referencia a la creación de una instancia de clase plantilla "SDLUtils::map_access_wrapper<Texture>" que se está compilando
+  NewGameState.cpp
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\NewGameState.cpp(15,10): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\NewGameState.cpp(16,10): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\NewGameState.cpp(17,55): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\NewGameState.cpp(17,40): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(51,32): warning C4101: 'e': variable local sin referencia
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(48,13): message : al compilar la función del miembro clase plantilla "T &SDLUtils::map_access_wrapper<T>::at(const std::string &)"
+          with
+          [
+              T=Texture
+          ]
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\NewGameState.cpp(13,5): message : vea la primera referencia a “SDLUtils::map_access_wrapper<Texture>::at” en “NewGameState::NewGameState”
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(199,30): message : Vea la referencia a la creación de una instancia de clase plantilla "SDLUtils::map_access_wrapper<Texture>" que se está compilando
+  NewRoundState.cpp
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\NewRoundState.cpp(15,10): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\NewRoundState.cpp(16,10): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\NewRoundState.cpp(17,55): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\NewRoundState.cpp(17,40): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(51,32): warning C4101: 'e': variable local sin referencia
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(48,13): message : al compilar la función del miembro clase plantilla "T &SDLUtils::map_access_wrapper<T>::at(const std::string &)"
+          with
+          [
+              T=Texture
+          ]
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\NewRoundState.cpp(13,7): message : vea la primera referencia a “SDLUtils::map_access_wrapper<Texture>::at” en “NewRoundState::NewRoundState”
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(199,30): message : Vea la referencia a la creación de una instancia de clase plantilla "SDLUtils::map_access_wrapper<Texture>" que se está compilando
+  PausedState.cpp
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\PausedState.cpp(12,10): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\PausedState.cpp(13,10): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\PausedState.cpp(14,55): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\PausedState.cpp(14,40): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(51,32): warning C4101: 'e': variable local sin referencia
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(48,13): message : al compilar la función del miembro clase plantilla "T &SDLUtils::map_access_wrapper<T>::at(const std::string &)"
+          with
+          [
+              T=Texture
+          ]
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\PausedState.cpp(10,7): message : vea la primera referencia a “SDLUtils::map_access_wrapper<Texture>::at” en “PausedState::PausedState”
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(199,30): message : Vea la referencia a la creación de una instancia de clase plantilla "SDLUtils::map_access_wrapper<Texture>" que se está compilando
   RunningState.cpp
-C:\Users\David\Desktop\Portal\GRADO DESARROLLO DE VIDEOJUEGOS\CURSOS\2ºCURSO\ASIGNATURAS\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\PacManSystem.h(7,17): warning C4099: 'Transform': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
-C:\Users\David\Desktop\Portal\GRADO DESARROLLO DE VIDEOJUEGOS\CURSOS\2ºCURSO\ASIGNATURAS\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.h(8,7): message : vea la declaración de 'Transform'
-C:\Users\David\Desktop\Portal\GRADO DESARROLLO DE VIDEOJUEGOS\CURSOS\2ºCURSO\ASIGNATURAS\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\RenderSystem.h(7,17): warning C4099: 'Transform': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
-C:\Users\David\Desktop\Portal\GRADO DESARROLLO DE VIDEOJUEGOS\CURSOS\2ºCURSO\ASIGNATURAS\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\PacManSystem.h(7,8): message : vea la declaración de 'Transform'
-C:\Users\David\Desktop\Portal\GRADO DESARROLLO DE VIDEOJUEGOS\CURSOS\2ºCURSO\ASIGNATURAS\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\GhostSystem.h(5,17): warning C4099: 'Transform': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
-C:\Users\David\Desktop\Portal\GRADO DESARROLLO DE VIDEOJUEGOS\CURSOS\2ºCURSO\ASIGNATURAS\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\CollisionsSystem.h(8,7): message : vea la declaración de 'Transform'
-C:\Users\David\Desktop\Portal\GRADO DESARROLLO DE VIDEOJUEGOS\CURSOS\2ºCURSO\ASIGNATURAS\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\ImmunitySystem.h(5,17): warning C4099: 'Transform': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
-C:\Users\David\Desktop\Portal\GRADO DESARROLLO DE VIDEOJUEGOS\CURSOS\2ºCURSO\ASIGNATURAS\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\GhostSystem.h(5,8): message : vea la declaración de 'Transform'
-C:\Users\David\Desktop\Portal\GRADO DESARROLLO DE VIDEOJUEGOS\CURSOS\2ºCURSO\ASIGNATURAS\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(51,32): warning C4101: 'e': variable local sin referencia
-C:\Users\David\Desktop\Portal\GRADO DESARROLLO DE VIDEOJUEGOS\CURSOS\2ºCURSO\ASIGNATURAS\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(48,13): message : al compilar la función del miembro clase plantilla "T &SDLUtils::map_access_wrapper<T>::at(const std::string &)"
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\PacManSystem.h(7,17): warning C4099: 'Transform': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.h(8,7): message : vea la declaración de 'Transform'
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\RenderSystem.h(7,17): warning C4099: 'Transform': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\PacManSystem.h(7,8): message : vea la declaración de 'Transform'
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\GhostSystem.h(5,17): warning C4099: 'Transform': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\CollisionsSystem.h(8,7): message : vea la declaración de 'Transform'
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\ImmunitySystem.h(5,17): warning C4099: 'Transform': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\GhostSystem.h(5,8): message : vea la declaración de 'Transform'
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(51,32): warning C4101: 'e': variable local sin referencia
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(48,13): message : al compilar la función del miembro clase plantilla "T &SDLUtils::map_access_wrapper<T>::at(const std::string &)"
           with
           [
               T=SoundEffect
           ]
-C:\Users\David\Desktop\Portal\GRADO DESARROLLO DE VIDEOJUEGOS\CURSOS\2ºCURSO\ASIGNATURAS\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\RunningState.cpp(66,30): message : vea la primera referencia a “SDLUtils::map_access_wrapper<SoundEffect>::at” en “RunningState::enter”
-C:\Users\David\Desktop\Portal\GRADO DESARROLLO DE VIDEOJUEGOS\CURSOS\2ºCURSO\ASIGNATURAS\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(201,34): message : Vea la referencia a la creación de una instancia de clase plantilla "SDLUtils::map_access_wrapper<SoundEffect>" que se está compilando
-  TPV2.vcxproj -> C:\Users\David\Desktop\Portal\GRADO DESARROLLO DE VIDEOJUEGOS\CURSOS\2ºCURSO\ASIGNATURAS\TPV2_2324\TPV2_PRACTICA_2\bin\TPV2Debug.exe
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\RunningState.cpp(66,30): message : vea la primera referencia a “SDLUtils::map_access_wrapper<SoundEffect>::at” en “RunningState::enter”
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(201,34): message : Vea la referencia a la creación de una instancia de clase plantilla "SDLUtils::map_access_wrapper<SoundEffect>" que se está compilando
+  JSON.cpp
+  JSONValue.cpp
+  json_demo.cpp
+  main.cpp
+  SDLUtils.cpp
+  sdlutils_demo.cpp
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(51,32): warning C4101: 'e': variable local sin referencia
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(48,13): message : al compilar la función del miembro clase plantilla "T &SDLUtils::map_access_wrapper<T>::at(const std::string &)"
+          with
+          [
+              T=Music
+          ]
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\sdlutils_demo.cpp(52,30): message : vea la primera referencia a “SDLUtils::map_access_wrapper<Music>::at” en “sdlutils_basic_demo”
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(202,28): message : Vea la referencia a la creación de una instancia de clase plantilla "SDLUtils::map_access_wrapper<Music>" que se está compilando
+  SoundEffect.cpp
+  Generando código...
+  Compilando...
+  Texture.cpp
+  CollisionsSystem.cpp
+  FoodSystem.cpp
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\FoodSystem.cpp(35,57): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\FoodSystem.cpp(88,8): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\FoodSystem.cpp(90,15): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\FoodSystem.cpp(91,16): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(51,32): warning C4101: 'e': variable local sin referencia
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(48,13): message : al compilar la función del miembro clase plantilla "T &SDLUtils::map_access_wrapper<T>::at(const std::string &)"
+          with
+          [
+              T=SoundEffect
+          ]
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\FoodSystem.cpp(122,42): message : vea la primera referencia a “SDLUtils::map_access_wrapper<SoundEffect>::at” en “FoodSystem::eatFood”
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(201,34): message : Vea la referencia a la creación de una instancia de clase plantilla "SDLUtils::map_access_wrapper<SoundEffect>" que se está compilando
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\ecs\Manager.h(96,40): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\FoodSystem.cpp(101,7): message : Vea la referencia a la creación de una instancia de la función plantilla "T *ecs::Manager::addComponent<Transform,Vector2D,Vector2D,int&,int&,float>(ecs::entity_t,Vector2D &&,Vector2D &&,int &,int &,float &&)" que se está compilando
+          with
+          [
+              T=Transform
+          ]
+  Puntuation.cpp
+  GhostSystem.cpp
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\ImageWithFrames.h(9,16): warning C4099: 'Transform': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\GhostSystem.h(5,8): message : vea la declaración de 'Transform'
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.h(8,16): warning C4099: 'Transform': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.h(8,7): message : vea la declaración de 'Transform'
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\GhostSystem.cpp(37,8): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\GhostSystem.cpp(42,52): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\GhostSystem.cpp(42,49): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\GhostSystem.cpp(53,63): warning C4244: '=': conversión de 'Uint32' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\GhostSystem.cpp(144,63): warning C4244: '=': conversión de 'Uint32' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(51,32): warning C4101: 'e': variable local sin referencia
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(48,13): message : al compilar la función del miembro clase plantilla "T &SDLUtils::map_access_wrapper<T>::at(const std::string &)"
+          with
+          [
+              T=SoundEffect
+          ]
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\GhostSystem.cpp(82,44): message : vea la primera referencia a “SDLUtils::map_access_wrapper<SoundEffect>::at” en “GhostSystem::onGhostDie”
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(201,34): message : Vea la referencia a la creación de una instancia de clase plantilla "SDLUtils::map_access_wrapper<SoundEffect>" que se está compilando
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\ecs\Manager.h(96,40): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\GhostSystem.cpp(42,7): message : Vea la referencia a la creación de una instancia de la función plantilla "T *ecs::Manager::addComponent<Transform,Vector2D,Vector2D,int&,int&,float>(ecs::entity_t,Vector2D &&,Vector2D &&,int &,int &,float &&)" que se está compilando
+          with
+          [
+              T=Transform
+          ]
+  ImmunitySystem.cpp
+  PacManSystem.cpp
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\ImageWithFrames.h(9,16): warning C4099: 'Transform': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\PacManSystem.h(7,8): message : vea la declaración de 'Transform'
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.h(8,16): warning C4099: 'Transform': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Transform.h(8,7): message : vea la declaración de 'Transform'
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(51,32): warning C4101: 'e': variable local sin referencia
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(48,13): message : al compilar la función del miembro clase plantilla "T &SDLUtils::map_access_wrapper<T>::at(const std::string &)"
+          with
+          [
+              T=SoundEffect
+          ]
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\PacManSystem.cpp(79,45): message : vea la primera referencia a “SDLUtils::map_access_wrapper<SoundEffect>::at” en “PacManSystem::recieve”
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(201,34): message : Vea la referencia a la creación de una instancia de clase plantilla "SDLUtils::map_access_wrapper<SoundEffect>" que se está compilando
+  RenderSystem.cpp
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\components\Image.h(6,16): warning C4099: 'Transform': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\systems\RenderSystem.h(7,8): message : vea la declaración de 'Transform'
+  Collisions.cpp
+  Vector2D.cpp
+  WinState.cpp
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\WinState.cpp(12,10): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\WinState.cpp(13,10): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\WinState.cpp(14,57): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\WinState.cpp(14,41): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(51,32): warning C4101: 'e': variable local sin referencia
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(48,13): message : al compilar la función del miembro clase plantilla "T &SDLUtils::map_access_wrapper<T>::at(const std::string &)"
+          with
+          [
+              T=Texture
+          ]
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\game\WinState.cpp(11,6): message : vea la primera referencia a “SDLUtils::map_access_wrapper<Texture>::at” en “WinState::WinState”
+C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\TPV2\src\sdlutils\SDLUtils.h(199,30): message : Vea la referencia a la creación de una instancia de clase plantilla "SDLUtils::map_access_wrapper<Texture>" que se está compilando
+  Generando código...
+  TPV2.vcxproj -> C:\Users\Usuario\Documents\Proyectos de Git Hub\TPV2_2324\TPV2_PRACTICA_2\bin\TPV2Debug.exe

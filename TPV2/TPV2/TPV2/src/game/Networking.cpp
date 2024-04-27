@@ -232,5 +232,4 @@ void Networking::send_restart() {
 
 void Networking::handle_restart() {
 	Game::instance()->get_fighters().bringAllToLife();
-
 }

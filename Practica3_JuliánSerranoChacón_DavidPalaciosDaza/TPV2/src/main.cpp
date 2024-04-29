@@ -3,7 +3,7 @@
 #include <iostream>
 #include <fstream>
 
-#include "src/game/Game.h"
+#include "game/Game.h"
 
 int main(int, char**) {
 

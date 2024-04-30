@@ -132,6 +132,23 @@ public:
 	// update the world, tec
 	void update();
 
+	void send_my_info();
+
+	void update_player_state(uint8_t id, Line fov,Point where,Point velocity,
+		float speed, float acceleration, float theta, PlayerState state);
+
+	void update_player_info(uint8_t id, Line fov, Point where, Point velocity,
+		float speed, float acceleration, float theta, PlayerState state);
+
+	void removePlayer(Uint8 id);
+
+	void killPlayer(Uint8 id);
+
+	// Moves the player when w,a,s,d are held down. Handles collision detection for the walls.
+	bool shoot(Uint8 pid);
+
+	bool checkCollission(Uint8 pid);
+
 private:
 
 	// Calculates wall size using the <corrected> ray to the wall.
@@ -141,9 +158,6 @@ private:
 	// Casts a ray from <where> in unit <direction> until a <walling> tile is hit.
 	Hit cast(const Point where, Point direction, uint8_t **walling,
 			bool ignore_players, bool ignore_deads);
-
-	// Moves the player when w,a,s,d are held down. Handles collision detection for the walls.
-	bool shoot(Player &p);
 
 	// Spins the player when keys grid_h,l are held down. When left-shit is held down the move is slower
 	inline void spin(Player &p);
@@ -367,6 +381,9 @@ private:
 
 	// the GPU structure with all the needed elements to draw the world
 	Gpu gpu_;
+
+	public:
+		bool uv = false;
 
 };
 

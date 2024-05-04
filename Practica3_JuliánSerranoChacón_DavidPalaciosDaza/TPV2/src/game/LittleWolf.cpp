@@ -41,6 +41,16 @@ void LittleWolf::update() {
 	if (p.state != ALIVE)
 		return;
 
+	if (uv) {
+		if (startTime == 0)
+			startTime = sdlutils().currRealTime();
+
+		if (sdlutils().currRealTime() > startTime + 2000) {
+			uv = false;
+			startTime = 0;
+		}
+
+	}
 
 	spin(p);  // handle spinning
 	move(p);  // handle moving

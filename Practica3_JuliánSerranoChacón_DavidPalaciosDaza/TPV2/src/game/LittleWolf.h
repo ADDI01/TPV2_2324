@@ -382,6 +382,7 @@ private:
 	// the GPU structure with all the needed elements to draw the world
 	Gpu gpu_;
 
+	float startTime = 0;
 	public:
 		bool uv = false;
 

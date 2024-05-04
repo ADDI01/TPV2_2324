@@ -27,7 +27,7 @@ public:
 	}
 
 	void send_state(LittleWolf::Line fov, LittleWolf::Point where, LittleWolf::Point velocity,
-		float speed, float acceleration, float theta, LittleWolf::PlayerState state);
+		float speed, float acceleration, float theta/* LittleWolf::PlayerState state*/);
 	void send_my_info(LittleWolf::Line fov, LittleWolf::Point where, LittleWolf::Point velocity,
 		float speed, float acceleration, float theta, LittleWolf::PlayerState state);
 	
@@ -42,7 +42,7 @@ private:
 	void handle_player_state(const PlayerStateMsg &m);
 	void handle_player_info(const PlayerInfoMsg &m);
 	void handle_shoot(const ShootMsg &m);
-	void handle_dead(const MsgWithId &m);
+	void handle_dead(const DeadMsg &m);
 	void handle_restart();
 
 	UDPsocket sock_;

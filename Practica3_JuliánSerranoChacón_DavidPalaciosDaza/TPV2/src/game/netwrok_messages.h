@@ -82,3 +82,8 @@ struct ShootMsg: MsgWithId {
 	_IMPL_SERIALIAZION_WITH_BASE_(MsgWithId, )
 
 };
+struct DeadMsg : MsgWithId {
+	Uint8 id;
+	_IMPL_SERIALIAZION_WITH_BASE_(MsgWithId, id)
+
+};

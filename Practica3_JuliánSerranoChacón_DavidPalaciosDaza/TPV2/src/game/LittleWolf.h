@@ -135,7 +135,7 @@ public:
 	void send_my_info();
 
 	void update_player_state(uint8_t id, Line fov,Point where,Point velocity,
-		float speed, float acceleration, float theta, PlayerState state);
+		float speed, float acceleration, float theta/*, PlayerState state*/);
 
 	void update_player_info(uint8_t id, Line fov, Point where, Point velocity,
 		float speed, float acceleration, float theta, PlayerState state);
@@ -145,9 +145,9 @@ public:
 	void killPlayer(Uint8 id);
 
 	// Moves the player when w,a,s,d are held down. Handles collision detection for the walls.
-	bool shoot(Uint8 pid);
+	void shoot(uint8_t p);
 
-	bool checkCollission(Uint8 pid);
+	bool checkCollission(uint8_t p);
 
 private:
 

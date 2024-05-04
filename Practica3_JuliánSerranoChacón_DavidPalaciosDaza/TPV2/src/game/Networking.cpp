@@ -96,6 +96,7 @@ void Networking::update() {
 	ShootMsg m3;
 	MsgWithId m4;
 	PlayerInfoMsg m5;
+	DeadMsg m6;
 
 	while (SDLNetUtils::deserializedReceive(m0, p_, sock_) > 0) {
 
@@ -128,8 +129,8 @@ void Networking::update() {
 			break;
 
 		case _DEAD:
-			m4.deserialize(p_->data);
-			handle_dead(m4);
+			m6.deserialize(p_->data);
+			handle_dead(m6);
 			break;
 
 		case _RESTART:
@@ -152,7 +153,7 @@ void Networking::handle_disconnet(Uint8 id) {
 }
 
 void Networking::send_state(LittleWolf::Line fov, LittleWolf::Point where, LittleWolf::Point velocity,
-	float speed, float acceleration, float theta, LittleWolf::PlayerState state)
+	float speed, float acceleration, float theta/*, LittleWolf::PlayerState state*/)
 {
 
 	PlayerStateMsg m;
@@ -169,7 +170,7 @@ void Networking::send_state(LittleWolf::Line fov, LittleWolf::Point where, Littl
 	m.speed = speed;
 	m.acceleration = acceleration;
 	m.theta = theta;
-	m.state = state;
+	//m.state = state;
 	SDLNetUtils::serializedSend(m, p_, sock_, srvadd_);
 }
 
@@ -180,21 +181,19 @@ void Networking::handle_player_state(const PlayerStateMsg &m)
 		LittleWolf::Line fov; fov.a.x = m.fax; fov.a.y = m.fay; fov.b.x = m.fbx; fov.b.y = m.fby;
 		LittleWolf::Point w; w.x = m.wx; w.y = m.wy;
 		LittleWolf::Point velocity; velocity.x = m.vx; velocity.y = m.vy;
-		Game::instance()->get_littlewolf().update_player_state(m._client_id,fov,w,velocity,m.speed,m.acceleration,m.theta,
-			(LittleWolf::PlayerState)m.state);
+		Game::instance()->get_littlewolf().update_player_state(m._client_id,fov,w,velocity,m.speed,m.acceleration,m.theta
+			/*,(LittleWolf::PlayerState)m.state*/);
 	}
 }
 
 void Networking::send_shoot(Uint8 pid) {
 	ShootMsg m;
 	m._type = _SHOOT;
-	m._client_id = pid;
+	m._client_id = clientId_;
 	SDLNetUtils::serializedSend(m, p_, sock_, srvadd_);
 }
 
 void Networking::handle_shoot(const ShootMsg &m) {
-
-
 	// play gun shot sound
 	sdlutils().soundEffects().at("gunshot").play();
 
@@ -203,14 +202,17 @@ void Networking::handle_shoot(const ShootMsg &m) {
 }
 
 void Networking::send_dead(Uint8 id) {
-	MsgWithId m;
+	DeadMsg m;
 	m._type = _DEAD;
-	m._client_id = id;
+	m._client_id = clientId_;
+	m.id = id;
 	SDLNetUtils::serializedSend(m, p_, sock_, srvadd_);
 }
 
-void Networking::handle_dead(const MsgWithId &m) {
-		Game::instance()->get_littlewolf().killPlayer(m._client_id);
+void Networking::handle_dead(const DeadMsg &m) {
+	if (m._client_id != clientId_) {
+		Game::instance()->get_littlewolf().killPlayer(m.id);
+	}
 }
 
 void Networking::send_my_info(LittleWolf::Line fov, LittleWolf::Point where, LittleWolf::Point velocity,

@@ -174,6 +174,8 @@ private:
 	// Render a list of current player
 	void render_players_info();
 
+	void render_reset_time();
+
 	// These are auxiliary function for vectors, colors, etc. All are from original littlewolf.
 
 	// Changes the field of view. A focal value of 1.0 is 90 degrees.
@@ -383,6 +385,7 @@ private:
 	Gpu gpu_;
 
 	float startTime = 0;
+	bool onRestart;
 	public:
 		bool uv = false;
 

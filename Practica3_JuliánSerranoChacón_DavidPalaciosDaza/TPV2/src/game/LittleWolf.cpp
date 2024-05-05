@@ -208,7 +208,9 @@ bool LittleWolf::addPlayer(std::uint8_t id) {
 		return false;
 
 	auto &rand = sdlutils().rand();
+
 	players_[id].state = ALIVE;
+
 	// The search for an empty cell start at a random position (orow,ocol)
 	uint16_t orow = rand.nextInt(0, map_.walling_height);
 	uint16_t ocol = rand.nextInt(0, map_.walling_width);
@@ -456,6 +458,19 @@ void LittleWolf::render_players_info() {
 
 		}
 	}
+}
+
+void LittleWolf::render_reset_time()
+{
+	float sec = 0;
+	std::string msg = ("The game will restart in " + std::to_string(sec) + " seconds.");
+
+	Texture info(sdlutils().renderer(), msg,
+		sdlutils().fonts().at("ARIAL24"),
+		build_sdlcolor(color_rgba(1)));
+
+	SDL_Rect dest = build_sdlrect(sdlutils().width() / 2, sdlutils().height() / 2, info.width(), info.height());
+
 }
 
 void LittleWolf::move(Player &p) {

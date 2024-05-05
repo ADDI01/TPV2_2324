@@ -81,7 +81,6 @@ void Game::start() {
 
 		}
 
-
 		little_wolf_->update();
 		net_->update();
 

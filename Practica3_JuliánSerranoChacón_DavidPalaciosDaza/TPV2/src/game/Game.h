@@ -26,5 +26,6 @@ private:
 	LittleWolf *little_wolf_;
 
 	Networking* net_;
+
 };
 

@@ -38,7 +38,7 @@ void LittleWolf::update() {
 
 	Player &p = players_[player_id_];
 	// dead player don't move/spin/shoot
-	if (p.state != ALIVE)
+	if (p.state != ALIVE || onRestart)
 		return;
 
 	if (uv) {
@@ -263,6 +263,10 @@ void LittleWolf::render() {
 	}
 	// render the identifiers, state, etc
 	render_players_info();
+
+	if (onRestart)
+		render_reset_time();
+
 }
 
 LittleWolf::Hit LittleWolf::cast(const Point where, Point direction,

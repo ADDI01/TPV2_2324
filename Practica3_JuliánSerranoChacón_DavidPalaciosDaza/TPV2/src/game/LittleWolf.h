@@ -385,6 +385,7 @@ private:
 	Gpu gpu_;
 
 	float startTime = 0;
+
 	bool onRestart;
 	public:
 		bool uv = false;

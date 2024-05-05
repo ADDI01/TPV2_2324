@@ -151,6 +151,8 @@ public:
 
 	void onRestart(bool b = true) { onRestart_ = b; startTime = 0;render_reset_time();}
 
+	void comproveRestart();
+
 private:
 
 	// Calculates wall size using the <corrected> ray to the wall.

@@ -50,6 +50,7 @@ void LittleWolf::update() {
 		}
 	}
 
+
 	if (onRestart_ || p.state != ALIVE)
 		return;
 
@@ -108,8 +109,9 @@ void LittleWolf::update_player_info(uint8_t id, Line fov, Point where, Point vel
 	p.acceleration = acceleration;
 	p.theta = theta;
 	p.state = static_cast<PlayerState>(state);
+	map_.walling[(int)players_[id].where.y][(int)players_[id].where.x] = 0;
 	// not that player <id> is stored in the map as player_to_tile(id) -- which is id+10
-	map_.walling[(int)p.where.y][(int)p.where.x] = player_to_tile(id);
+	//map_.walling[(int)p.where.y][(int)p.where.x] = player_to_tile(id);
 }
 
 void LittleWolf::removePlayer(Uint8 id)
@@ -122,18 +124,6 @@ void LittleWolf::removePlayer(Uint8 id)
 void LittleWolf::killPlayer(Uint8 id)
 {
 	players_[id].state = DEAD;
-
-	if (Game::instance()->get_networking().is_master()) {
-
-		int alive = 0, deaths = 0;
-		for (int i = 0; i < max_player && alive >= 2; i++) {
-			if (players_[i].state == ALIVE) alive++;
-			else if (players_[i].state == DEAD) deaths++;
-		}
-		if (deaths > 0) {
-			Game::instance()->get_networking().send_restart();
-		}
-	}
 }
 
 
@@ -612,6 +602,20 @@ bool LittleWolf::checkCollission(uint8_t pl)
 
 	}
 	return false;
+}
+
+void LittleWolf::comproveRestart()
+{
+	int alive = 0, deaths = 0, notUsed=0;
+	for (int i = 0; i < max_player && alive < 2; i++) {
+		if (players_[i].state == ALIVE) alive++;
+		else if (players_[i].state == DEAD) deaths++;
+		else if (players_[i].state == NOT_USED) notUsed++;
+	}
+
+	if (alive == 1 && deaths + alive == max_player - notUsed) {
+		Game::instance()->get_networking().send_restart();
+	}
 }
 
 void LittleWolf::switchToNextPlayer() {

@@ -213,6 +213,10 @@ void Networking::handle_dead(const DeadMsg &m) {
 	if (m._client_id != clientId_) {
 		Game::instance()->get_littlewolf().killPlayer(m.id);
 	}
+
+	if (Game::instance()->get_networking().is_master()) {
+		Game::instance()->get_littlewolf().comproveRestart();
+	}
 }
 
 void Networking::send_my_info(LittleWolf::Line fov, LittleWolf::Point where, LittleWolf::Point velocity,

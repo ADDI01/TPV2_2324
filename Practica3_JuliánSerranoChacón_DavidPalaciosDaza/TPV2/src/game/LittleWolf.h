@@ -121,7 +121,7 @@ public:
 	bool addPlayer(std::uint8_t id);
 
 	// mark all (used) player alive
-	void bringAllToLife();
+	void bringToLife();
 
 	// switch to the view of the next player
 	void switchToNextPlayer();
@@ -148,6 +148,8 @@ public:
 	void shoot(uint8_t p);
 
 	bool checkCollission(uint8_t p);
+
+	void onRestart(bool b = true) { onRestart_ = b; startTime = 0;render_reset_time();}
 
 private:
 
@@ -386,7 +388,8 @@ private:
 
 	float startTime = 0;
 
-	bool onRestart;
+	bool onRestart_ = false;
+	const int restartTime = 5000;
 	public:
 		bool uv = false;
 

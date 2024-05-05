@@ -72,11 +72,11 @@ void Game::start() {
 
 			// N switches to the next player view
 			if (ihdlr.isKeyDown(SDL_SCANCODE_U)) {
-				little_wolf_->uv = !little_wolf_->uv;
+				little_wolf_->uv = true;
 			}
 			// R brings deads to life
 			if (ihdlr.isKeyDown(SDL_SCANCODE_R)) {
-				little_wolf_->bringAllToLife();
+				net_->send_restart();
 			}
 
 		}
@@ -85,7 +85,7 @@ void Game::start() {
 		net_->update();
 
 		// the clear is not necessary since we copy the whole texture -- I guess ...
-		// sdlutils().clearRenderer();
+		sdlutils().clearRenderer();
 
 		little_wolf_->render();
 

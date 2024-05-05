@@ -38,7 +38,19 @@ void LittleWolf::update() {
 
 	Player &p = players_[player_id_];
 	// dead player don't move/spin/shoot
-	if (p.state != ALIVE || onRestart)
+
+	if (onRestart_) {
+		if (startTime == 0)
+			startTime = sdlutils().currRealTime();
+
+		if (sdlutils().currRealTime() > startTime + restartTime) {
+			onRestart_ = false;
+			bringToLife();
+			startTime = 0;
+		}
+	}
+
+	if (onRestart_ || p.state != ALIVE)
 		return;
 
 	if (uv) {
@@ -104,11 +116,13 @@ void LittleWolf::removePlayer(Uint8 id)
 {
 	players_[id].state = NOT_USED;
 	map_.walling[(int)players_[id].where.y][(int)players_[id].where.x] = 0;
+	send_my_info();
 }
 
 void LittleWolf::killPlayer(Uint8 id)
 {
 	players_[id].state = DEAD;
+
 	if (Game::instance()->get_networking().is_master()) {
 
 		int alive = 0, deaths = 0;
@@ -117,7 +131,7 @@ void LittleWolf::killPlayer(Uint8 id)
 			else if (players_[i].state == DEAD) deaths++;
 		}
 		if (deaths > 0) {
-
+			Game::instance()->get_networking().send_restart();
 		}
 	}
 }
@@ -262,8 +276,8 @@ bool LittleWolf::addPlayer(std::uint8_t id) {
 }
 
 void LittleWolf::render() {
-
-	// if the player is dead we only render upper view, otherwise the normal view
+	
+		// if the player is dead we only render upper view, otherwise the normal view
 	if (players_[player_id_].state == DEAD)
 		render_upper_view();
 	else {
@@ -275,9 +289,8 @@ void LittleWolf::render() {
 	// render the identifiers, state, etc
 	render_players_info();
 
-	if (onRestart)
+	if (onRestart_)
 		render_reset_time();
-
 }
 
 LittleWolf::Hit LittleWolf::cast(const Point where, Point direction,
@@ -477,15 +490,16 @@ void LittleWolf::render_players_info() {
 
 void LittleWolf::render_reset_time()
 {
-	float sec = 0;
+	int sec = (int)((startTime + restartTime - sdlutils().currRealTime()) / 1000);
 	std::string msg = ("The game will restart in " + std::to_string(sec) + " seconds.");
 
 	Texture info(sdlutils().renderer(), msg,
 		sdlutils().fonts().at("ARIAL24"),
-		build_sdlcolor(color_rgba(1)));
+		build_sdlcolor(color_rgba(10)));
 
-	SDL_Rect dest = build_sdlrect(sdlutils().width() / 2, sdlutils().height() / 2, info.width(), info.height());
+	SDL_Rect dest = build_sdlrect((sdlutils().width() / 2) - info.width() / 2, (sdlutils().height() / 2) - info.height() / 2, info.width(), info.height());
 
+	info.render(dest);
 }
 
 void LittleWolf::move(Player &p) {
@@ -612,11 +626,13 @@ void LittleWolf::switchToNextPlayer() {
 
 }
 
-void LittleWolf::bringAllToLife() {
-	// bring all dead players to life -- all stay in the same position
+void LittleWolf::bringToLife() {
+	/*// bring all dead players to life -- all stay in the same position
 	for (auto i = 0u; i < max_player; i++) {
 		if (players_[i].state == DEAD) {
 			players_[i].state = ALIVE;
 		}
-	}
+	}*/
+	removePlayer(player_id_);
+	addPlayer(player_id_);
 }

@@ -109,6 +109,17 @@ void LittleWolf::removePlayer(Uint8 id)
 void LittleWolf::killPlayer(Uint8 id)
 {
 	players_[id].state = DEAD;
+	if (Game::instance()->get_networking().is_master()) {
+
+		int alive = 0, deaths = 0;
+		for (int i = 0; i < max_player && alive >= 2; i++) {
+			if (players_[i].state == ALIVE) alive++;
+			else if (players_[i].state == DEAD) deaths++;
+		}
+		if (deaths > 0) {
+
+		}
+	}
 }
 
 

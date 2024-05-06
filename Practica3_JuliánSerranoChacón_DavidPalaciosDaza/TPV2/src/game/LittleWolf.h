@@ -74,6 +74,7 @@ public:
 		float acceleration;  // acceleration
 		float theta;         // rotation (in rad)
 		PlayerState state;   // the state
+		std::string name;
 	};
 
 	// Representing a map, the user_walling is the walling provided by the user, and
@@ -118,7 +119,7 @@ public:
 	void load(std::string filename);
 
 	// add a new player with identifier <id>, returns false if the id is already occupied
-	bool addPlayer(std::uint8_t id);
+	bool addPlayer(std::uint8_t id, std::string nombre);
 
 	// mark all (used) player alive
 	void bringToLife();
@@ -138,7 +139,7 @@ public:
 		float speed, float acceleration, float theta/*, PlayerState state*/);
 
 	void update_player_info(uint8_t id, Line fov, Point where, Point velocity,
-		float speed, float acceleration, float theta, PlayerState state);
+		float speed, float acceleration, float theta, PlayerState state, std::string name);
 
 	void removePlayer(Uint8 id);
 
@@ -153,6 +154,7 @@ public:
 
 	void comproveRestart();
 
+	void setPlayerName(uint8_t p, std::string);
 private:
 
 	// Calculates wall size using the <corrected> ray to the wall.

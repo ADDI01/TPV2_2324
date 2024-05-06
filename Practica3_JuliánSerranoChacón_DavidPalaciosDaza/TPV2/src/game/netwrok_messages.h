@@ -58,7 +58,7 @@ struct PlayerStateMsg: MsgWithId {
 
 };
 
-struct PlayerInfoMsg: MsgWithId {
+struct PlayerInfoMsg : MsgWithId {
 	float fax;            // focal view
 	float fay;
 	float fbx;
@@ -74,8 +74,10 @@ struct PlayerInfoMsg: MsgWithId {
 	float acceleration;  // acceleration
 	float theta;         // rotation (in rad)
 	Uint8 state;   // the state
+	char name[11];
 
-	_IMPL_SERIALIAZION_WITH_BASE_(MsgWithId, fax, fay, fbx, fby, wx, wy, vx, vy,speed,acceleration,theta,state)
+
+	_IMPL_SERIALIAZION_WITH_BASE_(MsgWithId, fax, fay, fbx, fby, wx, wy, vx, vy, speed, acceleration, theta, state, (name, 11))
 
 };
 struct ShootMsg: MsgWithId {

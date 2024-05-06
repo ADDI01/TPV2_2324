@@ -220,7 +220,7 @@ void Networking::handle_dead(const DeadMsg &m) {
 }
 
 void Networking::send_my_info(LittleWolf::Line fov, LittleWolf::Point where, LittleWolf::Point velocity,
-	float speed,float acceleration,float theta, LittleWolf::PlayerState state)
+	float speed,float acceleration,float theta, LittleWolf::PlayerState state, std::string name)
 {
 
 	PlayerInfoMsg m;
@@ -238,6 +238,7 @@ void Networking::send_my_info(LittleWolf::Line fov, LittleWolf::Point where, Lit
 	m.acceleration = acceleration;
 	m.theta = theta;
 	m.state = state;
+	Game::instance()->string_to_chars(name,m.name);
 	SDLNetUtils::serializedSend(m, p_, sock_, srvadd_);
 }
 
@@ -247,7 +248,7 @@ void Networking::handle_player_info(const PlayerInfoMsg &m) {
 		LittleWolf::Point w; w.x = m.wx; w.y = m.wy;
 		LittleWolf::Point velocity; velocity.x = m.vx; velocity.y = m.vy;
 		Game::instance()->get_littlewolf().update_player_info(m._client_id, fov, w, velocity, m.speed, m.acceleration, m.theta,
-			(LittleWolf::PlayerState)m.state);
+			(LittleWolf::PlayerState)m.state,m.name);
 	}
 }
 

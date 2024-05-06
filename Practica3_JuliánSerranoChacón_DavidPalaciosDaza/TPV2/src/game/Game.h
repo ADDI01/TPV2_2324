@@ -3,6 +3,7 @@
 #pragma once
 #include <SDL_stdinc.h>
 #include "../utils/Singleton.h"
+#include <string>
 
 class LittleWolf;
 class Networking;
@@ -22,6 +23,10 @@ public:
 	Networking& get_networking() {
 		return *net_;
 	}
+
+
+	void string_to_chars(std::string& str, char c_str[11]);
+	void chars_to_string(std::string& str, char c_str[11]);
 private:
 	LittleWolf *little_wolf_;
 

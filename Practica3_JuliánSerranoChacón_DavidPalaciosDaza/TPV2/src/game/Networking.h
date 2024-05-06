@@ -27,12 +27,12 @@ public:
 	}
 
 	void send_state(LittleWolf::Line fov, LittleWolf::Point where, LittleWolf::Point velocity,
-		float speed, float acceleration, float theta/* LittleWolf::PlayerState state*/);
+		float speed, float acceleration, float theta, int puntuation, int life/* LittleWolf::PlayerState state*/);
 	void send_my_info(LittleWolf::Line fov, LittleWolf::Point where, LittleWolf::Point velocity,
 		float speed, float acceleration, float theta, LittleWolf::PlayerState state, std::string name);
 	
 	void send_shoot(Uint8 pid);
-	void send_dead(Uint8 id);
+	void send_dead(Uint8 id, Uint8 killerId,int damage);
 	void send_restart();
 
 private:

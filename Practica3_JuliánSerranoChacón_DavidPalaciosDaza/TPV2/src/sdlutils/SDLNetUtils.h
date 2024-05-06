@@ -325,6 +325,17 @@ public:
 		return deserialize(reinterpret_cast<Uint32&>(v), buf);
 	}
 
+	//caso de arrays de tamaño 11
+	template<typename T>
+	inline static Uint8* serialize(T v[11], Uint8* buf) {
+		return serialize_array(v, 11, buf);
+	}
+
+	template<typename T>
+	inline static Uint8* deserialize(T v[11], Uint8* buf) {
+		return deserialize_array(v, 11, buf);
+	}
+
 	// FLOAT - using frexp/ldexp.
 
 	// Based on https://gist.github.com/ahamez/fa4760800d454a080cd83e5963ca5bf2

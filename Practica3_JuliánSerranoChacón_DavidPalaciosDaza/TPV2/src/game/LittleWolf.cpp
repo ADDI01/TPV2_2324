@@ -69,7 +69,7 @@ void LittleWolf::update() {
 	move(p);  // handle moving
 	shoot(p.id); // handle shooting
 
-	Game::instance()->get_networking().send_state(p.fov, p.where, p.velocity, p.speed, p.acceleration, p.theta/*, p.state*/);
+	Game::instance()->get_networking().send_state(p.fov, p.where, p.velocity, p.speed, p.acceleration, p.theta,p.puntuation,p.life/*, p.state*/);
 }
 
 void LittleWolf::send_my_info()
@@ -80,7 +80,7 @@ void LittleWolf::send_my_info()
 		p.theta,p.state,p.name);
 }
 
-void LittleWolf::update_player_state(uint8_t id, Line fov, Point where, Point velocity, float speed, float acceleration, float theta/*, PlayerState state*/)
+void LittleWolf::update_player_state(uint8_t id, Line fov, Point where, Point velocity, float speed, float acceleration, float theta, int puntuation, int life/*, PlayerState state*/)
 {
 	Player& p = players_[id];
 	map_.walling[(int)p.where.y][(int)p.where.x] = 0;
@@ -92,6 +92,8 @@ void LittleWolf::update_player_state(uint8_t id, Line fov, Point where, Point ve
 	p.speed = speed;
 	p.acceleration = acceleration;
 	p.theta = theta;
+	p.puntuation = puntuation;
+	p.life = life;
 	//p.state = state;
 	// not that player <id> is stored in the map as player_to_tile(id) -- which is id+10
 	map_.walling[(int)p.where.y][(int)p.where.x] = player_to_tile(id);
@@ -217,7 +219,7 @@ void LittleWolf::load(std::string filename) {
 
 }
 
-bool LittleWolf::addPlayer(std::uint8_t id, std::string nombre) {
+bool LittleWolf::addPlayer(std::uint8_t id, std::string nombre, int puntuation, int life) {
 	assert(id < max_player);
 
 	if (players_[id].state != NOT_USED)
@@ -257,6 +259,8 @@ bool LittleWolf::addPlayer(std::uint8_t id, std::string nombre) {
 					ALIVE                       // Player state
 			};
 	p.name = nombre;
+	p.puntuation = puntuation;
+	p.life = life;
 	// not that player <id> is stored in the map as player_to_tile(id) -- which is id+10
 	map_.walling[(int) p.where.y][(int) p.where.x] = player_to_tile(id);
 	players_[id] = p;
@@ -328,6 +332,18 @@ LittleWolf::Wall LittleWolf::project(const int xres, const int yres,
 	// (or segfault) when rasterizing pixels off screen.
 	const Wall wall = { top > yres ? yres : top, bot < 0 ? 0 : bot, size };
 	return wall;
+}
+
+void LittleWolf::getDamage(uint8_t p, int damage)
+{
+	Player& pl = players_[p];
+	
+	pl.life -= damage;
+
+	if (pl.life <= 0) {
+		Game::instance()->get_littlewolf().killPlayer(p);
+		pl.life = 0;
+	}
 }
 
 void LittleWolf::render_map(Player &p) {
@@ -434,7 +450,7 @@ void LittleWolf::render_upper_view() {
 	for (int i = 0u; i < max_player; i++) {
 		Player &p = players_[i];
 		if (p.state != NOT_USED) {
-			Texture info(sdlutils().renderer(), "P" + std::to_string(i),
+			Texture info(sdlutils().renderer(), p.name,
 					sdlutils().fonts().at("ARIAL12"),
 					build_sdlcolor(color_rgba(i + 10)));
 
@@ -464,7 +480,8 @@ void LittleWolf::render_players_info() {
 		// render player info if it is used
 		if (s != NOT_USED) {
 
-			std::string msg = (i == player_id_ ? ("*" + p.name) : p.name) + (s == DEAD ? " (dead)" : "");
+			std::string msg = (i == player_id_ ? ("*" + p.name) : p.name) + " P: " + std::to_string(p.puntuation) + 
+				" L: " + std::to_string(p.life) + (s == DEAD ? " (dead)" : "");
 
 			Texture info(sdlutils().renderer(), msg,
 					sdlutils().fonts().at("ARIAL24"),
@@ -593,10 +610,11 @@ bool LittleWolf::checkCollission(uint8_t pl)
 
 		if (hit.tile > 9 && mag(sub(p.where, hit.where)) < shoot_distace) {
 			uint8_t id = tile_to_player(hit.tile);
-			Game::instance()->get_networking().send_dead(id);
+			Game::instance()->get_networking().send_dead(id,p.id,hit.tile);
 			//players_[id].state = DEAD;
-
-			killPlayer(id);
+			addPuntuation(p.id);
+			getDamage(id, hit.tile);
+			//killPlayer(id);
 			sdlutils().soundEffects().at("pain").play();
 			return true;
 		}
@@ -638,6 +656,7 @@ void LittleWolf::bringToLife() {
 			players_[i].state = ALIVE;
 		}
 	}*/
+	Player& p = players_[player_id_];
 	removePlayer(player_id_);
-	addPlayer(player_id_,players_[player_id_].name);
+	addPlayer(player_id_,p.name, p.puntuation);
 }

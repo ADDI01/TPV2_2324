@@ -153,7 +153,7 @@ void Networking::handle_disconnet(Uint8 id) {
 }
 
 void Networking::send_state(LittleWolf::Line fov, LittleWolf::Point where, LittleWolf::Point velocity,
-	float speed, float acceleration, float theta/*, LittleWolf::PlayerState state*/)
+	float speed, float acceleration, float theta, int puntuation, int life/*, LittleWolf::PlayerState state*/)
 {
 
 	PlayerStateMsg m;
@@ -171,6 +171,8 @@ void Networking::send_state(LittleWolf::Line fov, LittleWolf::Point where, Littl
 	m.acceleration = acceleration;
 	m.theta = theta;
 	//m.state = state;
+	m.puntuation = puntuation;
+	m.life = life;
 	SDLNetUtils::serializedSend(m, p_, sock_, srvadd_);
 }
 
@@ -181,7 +183,7 @@ void Networking::handle_player_state(const PlayerStateMsg &m)
 		LittleWolf::Line fov; fov.a.x = m.fax; fov.a.y = m.fay; fov.b.x = m.fbx; fov.b.y = m.fby;
 		LittleWolf::Point w; w.x = m.wx; w.y = m.wy;
 		LittleWolf::Point velocity; velocity.x = m.vx; velocity.y = m.vy;
-		Game::instance()->get_littlewolf().update_player_state(m._client_id,fov,w,velocity,m.speed,m.acceleration,m.theta
+		Game::instance()->get_littlewolf().update_player_state(m._client_id,fov,w,velocity,m.speed,m.acceleration,m.theta,m.puntuation,m.life
 			/*,(LittleWolf::PlayerState)m.state*/);
 	}
 }
@@ -201,17 +203,20 @@ void Networking::handle_shoot(const ShootMsg &m) {
 		Game::instance()->get_littlewolf().checkCollission(m._client_id);
 }
 
-void Networking::send_dead(Uint8 id) {
+void Networking::send_dead(Uint8 id, Uint8 killerId, int damage) {
 	DeadMsg m;
 	m._type = _DEAD;
 	m._client_id = clientId_;
 	m.id = id;
+	m.killerId = killerId;
+	m.damage = damage;
 	SDLNetUtils::serializedSend(m, p_, sock_, srvadd_);
 }
 
 void Networking::handle_dead(const DeadMsg &m) {
 	if (m._client_id != clientId_) {
-		Game::instance()->get_littlewolf().killPlayer(m.id);
+		Game::instance()->get_littlewolf().addPuntuation(m.killerId);
+		Game::instance()->get_littlewolf().getDamage(m.id, m.damage);
 	}
 
 	if (Game::instance()->get_networking().is_master()) {

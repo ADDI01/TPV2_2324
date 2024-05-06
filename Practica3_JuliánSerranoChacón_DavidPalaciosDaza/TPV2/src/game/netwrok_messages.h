@@ -53,8 +53,10 @@ struct PlayerStateMsg: MsgWithId {
 	float acceleration;  // acceleration
 	float theta;         // rotation (in rad)
 	Uint8 state;   // the state
+	int puntuation;
+	int life;
 
-	_IMPL_SERIALIAZION_WITH_BASE_(MsgWithId, fax, fay, fbx, fby, wx, wy, vx, vy, speed, acceleration, theta, state)
+	_IMPL_SERIALIAZION_WITH_BASE_(MsgWithId, fax, fay, fbx, fby, wx, wy, vx, vy, speed, acceleration, theta, state,puntuation,life)
 
 };
 
@@ -77,7 +79,7 @@ struct PlayerInfoMsg : MsgWithId {
 	char name[11];
 
 
-	_IMPL_SERIALIAZION_WITH_BASE_(MsgWithId, fax, fay, fbx, fby, wx, wy, vx, vy, speed, acceleration, theta, state, (name, 11))
+	_IMPL_SERIALIAZION_WITH_BASE_(MsgWithId, fax, fay, fbx, fby, wx, wy, vx, vy, speed, acceleration, theta, state, name, 11)
 
 };
 struct ShootMsg: MsgWithId {
@@ -86,6 +88,8 @@ struct ShootMsg: MsgWithId {
 };
 struct DeadMsg : MsgWithId {
 	Uint8 id;
-	_IMPL_SERIALIAZION_WITH_BASE_(MsgWithId, id)
+	Uint8 killerId;
+	int damage;
+	_IMPL_SERIALIAZION_WITH_BASE_(MsgWithId, id, killerId, damage)
 
 };

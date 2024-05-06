@@ -75,6 +75,8 @@ public:
 		float theta;         // rotation (in rad)
 		PlayerState state;   // the state
 		std::string name;
+		int puntuation;
+		int life;
 	};
 
 	// Representing a map, the user_walling is the walling provided by the user, and
@@ -119,7 +121,7 @@ public:
 	void load(std::string filename);
 
 	// add a new player with identifier <id>, returns false if the id is already occupied
-	bool addPlayer(std::uint8_t id, std::string nombre);
+	bool addPlayer(std::uint8_t id, std::string nombre, int puntuation = 0, int life = 100);
 
 	// mark all (used) player alive
 	void bringToLife();
@@ -136,7 +138,7 @@ public:
 	void send_my_info();
 
 	void update_player_state(uint8_t id, Line fov,Point where,Point velocity,
-		float speed, float acceleration, float theta/*, PlayerState state*/);
+		float speed, float acceleration, float theta, int puntuation, int life/*, PlayerState state*/);
 
 	void update_player_info(uint8_t id, Line fov, Point where, Point velocity,
 		float speed, float acceleration, float theta, PlayerState state, std::string name);
@@ -155,6 +157,10 @@ public:
 	void comproveRestart();
 
 	void setPlayerName(uint8_t p, std::string);
+
+	void addPuntuation(uint8_t p) { players_[p].puntuation++; }
+
+	void getDamage(uint8_t p, int damage);
 private:
 
 	// Calculates wall size using the <corrected> ray to the wall.

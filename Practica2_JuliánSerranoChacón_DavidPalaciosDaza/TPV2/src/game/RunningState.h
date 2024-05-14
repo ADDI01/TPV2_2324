@@ -13,6 +13,7 @@ class FoodSystem;
 class RenderSystem;
 class CollisionsSystem;
 class ImmunitySystem;
+class PuntuatuionSystem;
 
 class RunningState: public GameState {
 public:
@@ -22,10 +23,8 @@ public:
 	void update() override;
 	void enter() override;
 private:
-	void checkCollisions();
 	void onPacManDeath();
 	InputHandler &ihdlr;
-
 
 	PacManSystem* pacmanSys_;
 	FoodSystem* foodSys_;
@@ -33,5 +32,6 @@ private:
 	RenderSystem* renderSys_;
 	CollisionsSystem* collisionSys_;
 	ImmunitySystem* immunitySys_;
+	PuntuatuionSystem* puntuationSys_;
 };
 

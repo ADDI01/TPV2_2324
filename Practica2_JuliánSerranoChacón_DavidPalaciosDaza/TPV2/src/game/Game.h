@@ -7,7 +7,7 @@
 #include "GameState.h"
 
 namespace ecs {
-class Manager;
+	class Manager;
 }
 
 class InputHandler;

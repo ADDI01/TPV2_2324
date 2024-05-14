@@ -2,6 +2,7 @@
 
 #include "../components/ImageWithFrames.h"
 #include "../components/Transform.h"
+#include "../components/Inmunity.h"
 #include "../ecs/Manager.h"
 #include "../sdlutils/SDLUtils.h"
 #include "../ecs/Entity.h"
@@ -16,7 +17,6 @@ GhostSystem::~GhostSystem()
 
 void GhostSystem::initSystem()
 {
-	canSpawnGhost = true;
 }
 
 void GhostSystem::update()
@@ -64,11 +64,9 @@ void GhostSystem::recieve(const Message& m)
 		break;
 	case  _m_IMMUNITY_START:
 		changeGhostsLook(0,6,8,1);
-		canSpawnGhost = false;
 		break;
 	case _m_IMMUNITY_END:
 		changeGhostsLook(0, 4, 8, 1);
-		canSpawnGhost = true;
 		break;
 	default:
 		break;
@@ -139,7 +137,7 @@ void GhostSystem::moveGhosts()
 void GhostSystem::timeGhostGenerator()
 {
 	if (sdlutils().virtualTimer().currTime() > lastTimeGeneratedGhost_ + 5000) {
-		if(canSpawnGhost && nGhosts < 10)
+		if (!mngr_->getComponent<Inmunity>(mngr_->getHandler(ecs::hdlr::PACMAN))->getInmunnity() && nGhosts < 10)
 			createGhost();
 		lastTimeGeneratedGhost_ = sdlutils().virtualTimer().currTime();
 	}

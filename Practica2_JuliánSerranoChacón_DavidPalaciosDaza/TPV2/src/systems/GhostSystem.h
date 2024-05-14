@@ -26,6 +26,5 @@ public:
 private:
 	int nGhosts;
 	float lastTimeGeneratedGhost_;
-	bool canSpawnGhost;
 };
 

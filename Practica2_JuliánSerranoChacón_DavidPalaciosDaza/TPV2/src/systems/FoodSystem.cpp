@@ -48,13 +48,11 @@ void FoodSystem::recieve(const Message& m)
 {
 	switch (m.id)
 	{case _m_NEW_GAME:
+		eatAllFoods();
 		generateGrid();
 		break;
 	case _m_ROUND_START:
 		resetTimers();
-		break;
-	case _m_GAME_OVER:
-		eatAllFoods();
 		break;
 	case _m_PACMAN_FOOD_COLLISION:
 		eatFood(m.pacman_food_collision_data.food);

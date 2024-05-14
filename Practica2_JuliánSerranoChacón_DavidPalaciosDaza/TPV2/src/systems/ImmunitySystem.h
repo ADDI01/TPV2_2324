@@ -18,6 +18,5 @@ public:
 
 private:
 	int startInmunityTime;
-	bool immunity;
 };
 

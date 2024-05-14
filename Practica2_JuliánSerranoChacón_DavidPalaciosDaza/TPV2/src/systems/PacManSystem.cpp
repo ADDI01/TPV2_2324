@@ -83,7 +83,7 @@ void PacManSystem::recieve(const Message& m)
 
 		if (m.game_over_data.win) {
 			sdlutils().soundEffects().at("won").play();
-			Game::instance()->setState(Game::WIN);
+			Game::instance()->setState(Game::GAMEOVER);
 		}
 		else {
 			sdlutils().soundEffects().at("death").play();

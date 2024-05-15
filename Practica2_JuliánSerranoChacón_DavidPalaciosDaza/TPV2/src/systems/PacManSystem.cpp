@@ -6,6 +6,7 @@
 #include "../components/Transform.h"
 #include "../components/Health.h"
 #include "../components/Inmunity.h"
+#include "../components/Score.h"
 #include "../ecs/Manager.h"
 #include "../sdlutils/InputHandler.h"
 #include "../sdlutils/SDLUtils.h"
@@ -115,7 +116,8 @@ void PacManSystem::killPacman()
 
 void PacManSystem::onPacmanHitWithGhost()
 {
-	if (!mngr_->getComponent<Inmunity>(mngr_->getHandler(ecs::hdlr::PACMAN))->getInmunnity()) {
+	ecs::Entity* pacman = mngr_->getHandler(ecs::hdlr::PACMAN);
+	if (!mngr_->getComponent<Inmunity>(pacman)->getInmunnity()) {
 		if (update_lives(-1) > 0) {
 			Message m2;
 			m2.id = _m_ROUND_OVER;
@@ -127,6 +129,9 @@ void PacManSystem::onPacmanHitWithGhost()
 			m2.game_over_data.win = false;
 			mngr_->send(m2);
 		}
+	}
+	else {
+		mngr_->getComponent<Score>(pacman)->setScore(GHOST_POINTS);
 	}
 }
 
@@ -143,5 +148,6 @@ void PacManSystem::createPacman()
 	mngr_->addComponent<ImageWithFrames>(pacman, &sdlutils().images().at("pacman_sprites"), 8, 8, 0, 0, 128, 128, 0, 0, 1, 4);
 	mngr_->addComponent<Health>(pacman, 3);
 	mngr_->addComponent<Inmunity>(pacman);
+	mngr_->addComponent<Score>(pacman);
 }
 
